@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/convertisseur.c
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+string.h
+-
+./convertisseur.h
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/convertisseur.h
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/convertisseur.h
+stdio.h
+-
+
