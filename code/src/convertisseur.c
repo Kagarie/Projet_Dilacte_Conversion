@@ -6,13 +6,13 @@
 #include "./convertisseur.h"
 
 //tableau des différents dialecte
-static char dilacte["FR_fr","FR_be"];
+static  char *dilacte[]={"FR_fr","FR_be"};
 
 //fonction pour afficher les dilacte disponible
 void static affichageDesDilacteDiponible(){
     puts("listes des dialectes disponible");
-    for(int i = 0 ; i<sizeof(dilacte) ;i+=1)
-        printf("%s",dilacte[i]);
+    for(int i = 0 ; i<sizeof(*dilacte)-1 ;i++)
+        printf("%s\n",dilacte[i]);
 }
 
 //explication de l'utilisation de la librairy
@@ -40,9 +40,10 @@ bool static verifDilacte(char* commande){
         int i = 0 ; 
         bool present =false;
         while(i<sizeof(dilacte) || present){
-            if(&commande==dilacte[i]){
+            if(mystrcmp(commande,dilacte[i])==0){
             present=true;
             }
+            i+=1;
         }
         //si le dilacte n'est pas présent on affiche les dilactes présent et on sort du programme
         if(!present){
@@ -80,5 +81,6 @@ int main (int argc, char* argv[]){
         Si tous les tests précédents sont bien passé nous pouvons passé en 
         phase de la traitement de la demande 
     */
+   puts("ok");
 return EXIT_SUCCESS;
 }
