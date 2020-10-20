@@ -6,5 +6,5 @@ On fera un point pour la répartition des taches et je ferai des branch pour cha
 Tout évoluera au cour du projet même le README ce n'est qu'une première ébauche
 On fera un point sur l'utiliation du README aussi
 
-##Correction à apporter avant d'aller plus loin : 
+## Correction à apporter avant d'aller plus loin : 
 -fix erreur segmentation sur le parcours du tableau de dilacte
