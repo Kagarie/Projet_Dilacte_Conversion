@@ -7,4 +7,4 @@ Tout évoluera au cour du projet même le README ce n'est qu'une première ébau
 On fera un point sur l'utiliation du README aussi
 
 ## Correction à apporter avant d'aller plus loin : 
--fix erreur segmentation sur le parcours du tableau de dilacte
+- Pour fix l'erreur il faut allouer de la mémoir au tableau problème le tableau est considéré comme une constante ...

@@ -6,7 +6,9 @@
 #include "./convertisseur.h"
 
 //tableau des différents dialecte
-static  char *dilacte[]={"FR_fr","FR_be"};
+static  char *dilacte;
+dilacte=malloc(2 *sizeof(char));
+dilacte[]={"FR_fr","FR_be"}
 
 //fonction pour afficher les dilacte disponible
 void static affichageDesDilacteDiponible(){
