@@ -42,7 +42,7 @@ bool static verifDialecte(char* commande){
         int i = 0 ; 
         bool present =false;
         while(i<sizeof(dialecte) || present){
-            if(mystrcmp(commande,dilacte[i])==0){
+            if(mystrcmp(commande,dialecte[i])==0){
             present=true;
             }
             i+=1;
@@ -50,7 +50,7 @@ bool static verifDialecte(char* commande){
         //si le dialecte n'est pas présent on affiche les dialectes présent et on sort du programme
         if(!present){
         puts("dialecte attendu");
-        affichageDesDialecteDiponible();
+        affichageDesDilacteDiponible();
         return false;
         }
     //si le dialecte et présent on peut continuer le traitement
@@ -58,18 +58,19 @@ bool static verifDialecte(char* commande){
     }
 
 int main (int argc, char* argv[]){
+    
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre 
    if(argc == 1 || mystrcmp(argv[1],"-c") ==0|| mystrcmp(argv[1],"-commande")==0){
      usage();
     }
     if(mystrcmp(argv[1],"-d") ==0|| mystrcmp(argv[1],"-dialecte")==0){
-        affichageDesDialecteDiponible();
+        affichageDesDilacteDiponible();
     }
   
     //Si le paramètre n'est pas une commande on test si c'est un dialecte 
     //Si ce n'est pas un dialecte et ni une commande on arrête le programme
-    if(!verifDilacte(argv[1])){
+    if(!verifDialecte(argv[1])){
         exit(EXIT_FAILURE);
     }
        
@@ -84,5 +85,9 @@ int main (int argc, char* argv[]){
         phase de la traitement de la demande 
     */
    puts("ok");
+   Convertisseur *conv;
+   conv->dialecte = *argv[1];
+   conv->nombre = strtol(argv[2],NULL,0);
+  
 return EXIT_SUCCESS;
 }
