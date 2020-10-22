@@ -6,22 +6,22 @@
 #include "./convertisseur.h"
 
 //tableau des différents dialecte
-static  char *dilacte;
-dilacte=malloc(2 *sizeof(char));
-dilacte[]={"FR_fr","FR_be"}
+static  char *dialecte;
+dialecte=malloc(2 *sizeof(char));
+dialecte[]={"FR_fr","FR_be"}
 
-//fonction pour afficher les dilacte disponible
+//fonction pour afficher les dialecte disponible
 void static affichageDesDilacteDiponible(){
     puts("listes des dialectes disponible");
-    for(int i = 0 ; i<sizeof(*dilacte)-1 ;i++)
-        printf("%s\n",dilacte[i]);
+    for(int i = 0 ; i<sizeof(*dialecte)-1 ;i++)
+        printf("%s\n",dialecte[i]);
 }
 
 //explication de l'utilisation de la librairy
 void static usage(){
     puts("La librairy s'utilise de la manière suivante\n./convertisseur [char , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
-    puts("-d -dilactes pour voir les dilactes disponible");
+    puts("-d -dialecte pour voir les dialecte disponible");
     exit(EXIT_SUCCESS);
 }
 
@@ -37,23 +37,23 @@ int static mystrcmp(const char* s1, const char* s2){
     while (s1[i-1] != 0);
     return 0;
 }
-//on vérifie si le dilacte est bien présent 
-bool static verifDilacte(char* commande){
+//on vérifie si le dialecte est bien présent 
+bool static verifDialecte(char* commande){
         int i = 0 ; 
         bool present =false;
-        while(i<sizeof(dilacte) || present){
+        while(i<sizeof(dialecte) || present){
             if(mystrcmp(commande,dilacte[i])==0){
             present=true;
             }
             i+=1;
         }
-        //si le dilacte n'est pas présent on affiche les dilactes présent et on sort du programme
+        //si le dialecte n'est pas présent on affiche les dialectes présent et on sort du programme
         if(!present){
-        puts("dilacte attendu");
-        affichageDesDilacteDiponible();
+        puts("dialecte attendu");
+        affichageDesDialecteDiponible();
         return false;
         }
-    //si le dilacte et présent on peut continuer le traitement
+    //si le dialecte et présent on peut continuer le traitement
     return true;
     }
 
@@ -63,12 +63,12 @@ int main (int argc, char* argv[]){
    if(argc == 1 || mystrcmp(argv[1],"-c") ==0|| mystrcmp(argv[1],"-commande")==0){
      usage();
     }
-    if(mystrcmp(argv[1],"-d") ==0|| mystrcmp(argv[1],"-dilactes")==0){
-        affichageDesDilacteDiponible();
+    if(mystrcmp(argv[1],"-d") ==0|| mystrcmp(argv[1],"-dialecte")==0){
+        affichageDesDialecteDiponible();
     }
   
-    //Si le paramètre n'est pas une commande on test si c'est un dilacte 
-    //Si ce n'est pas un dilacte et ni une commande on arrête le programme
+    //Si le paramètre n'est pas une commande on test si c'est un dialecte 
+    //Si ce n'est pas un dialecte et ni une commande on arrête le programme
     if(!verifDilacte(argv[1])){
         exit(EXIT_FAILURE);
     }
