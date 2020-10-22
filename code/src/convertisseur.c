@@ -19,7 +19,7 @@ void static affichageDesDilacteDiponible(){
 
 //explication de l'utilisation de la librairy
 void static usage(){
-    puts("La librairy s'utilise de la manière suivante\n./convertisseur [char , int]\n");
+    puts("La librairy s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
     puts("-d -dialecte pour voir les dialecte disponible");
     exit(EXIT_SUCCESS);

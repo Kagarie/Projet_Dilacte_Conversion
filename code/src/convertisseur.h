@@ -4,7 +4,7 @@
 typedef struct Convertisseur Convertisseur;
 struct Convertisseur
 {
-    char dilacte;
+    char dialecte;
     long int nombre;
     char nombreEnLettre;
 };
