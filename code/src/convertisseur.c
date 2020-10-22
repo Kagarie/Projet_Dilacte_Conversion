@@ -84,10 +84,6 @@ int main (int argc, char* argv[]){
         Si tous les tests précédents sont bien passé nous pouvons passé en 
         phase de la traitement de la demande 
     */
-   puts("ok");
-   Convertisseur *conv;
-   conv->dialecte = *argv[1];
-   conv->nombre = strtol(argv[2],NULL,0);
   
 return EXIT_SUCCESS;
 }
