@@ -11,52 +11,69 @@
 int
 main(int argc, char *argv[])
 {
-    int number;
+    int done = 0;
 
-    if (argc < 2) {
-        printf("Usage: %s file1.yaml ...\n", argv[0]);
-        return 0;
-    }
+    yaml_parser_t parser;
+    yaml_event_t event;
 
-    for (number = 1; number < argc; number ++)
-    {
-        FILE *file;
-        yaml_parser_t parser;
-        yaml_event_t event;
-        int done = 0;
-        int count = 0;
-        int error = 0;
 
-        printf("[%d] Parsing '%s': ", number, argv[number]);
-        fflush(stdout);
+/* Create the Parser object. */
+yaml_parser_initialize(&parser);
 
-        file = fopen(argv[number], "rb");
-        assert(file);
+/* Set a string input. */
+char *input = "...";
+size_t length = strlen(input);
 
-        assert(yaml_parser_initialize(&parser));
+yaml_parser_set_input_string(&parser, input, length);
 
-        yaml_parser_set_input_file(&parser, file);
+/* Set a file input. */
+FILE *input = fopen("...", "rb");
 
-        while (!done)
-        {
-            if (!yaml_parser_parse(&parser, &event)) {
-                error = 1;
-                break;
-            }
+yaml_parser_set_input_file(&parser, input);
 
-            done = (event.type == YAML_STREAM_END_EVENT);
+/* Set a generic reader. */
+void *ext = ...;
+int read_handler(void *ext, char *buffer, int size, int *length) {
+    /* ... */
+    *buffer = ...;
+    *length = ...;
+    /* ... */
+    return error ? 0 : 1;
+}
 
-            yaml_event_delete(&event);
+yaml_parser_set_input(&parser, read_handler, ext);
 
-            count ++;
-        }
+/* Read the event sequence. */
+while (!done) {
 
-        yaml_parser_delete(&parser);
+    /* Get the next event. */
+    if (!yaml_parser_parse(&parser, &event))
+        goto error;
 
-        assert(!fclose(file));
+    /*
+      ...
+      Process the event.
+      ...
+    */
 
-        printf("%s (%d events)\n", (error ? "FAILURE" : "SUCCESS"), count);
-    }
+    /* Are we finished? */
+    done = (event.type == YAML_STREAM_END_EVENT);
 
-    return 0;
+    /* The application is responsible for destroying the event object. */
+    yaml_event_delete(&event);
+
+}
+
+/* Destroy the Parser object. */
+yaml_parser_delete(&parser);
+
+return 1;
+
+/* On error. */
+error:
+
+/* Destroy the Parser object. */
+yaml_parser_delete(&parser);
+
+return 0;
 }
