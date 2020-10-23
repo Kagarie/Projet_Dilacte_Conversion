@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <yaml.h>
 
 #include "./convertisseur.h"
 
