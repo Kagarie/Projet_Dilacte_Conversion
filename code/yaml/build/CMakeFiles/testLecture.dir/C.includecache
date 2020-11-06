@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/yaml/src/testLecture.c
+stdio.h
+-
+string.h
+-
+yaml.h
+-
+
