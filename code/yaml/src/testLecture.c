@@ -43,7 +43,6 @@ int main(void) {
                 case YAML_SCALAR_TOKEN: 
                 //on récupére chaques éléments du fichier 
                 tk=token.data.scalar.value;
-
                 /*le premier élèment récupérer et le nom du dialecte
                 dans autre cas il nouos servira plus donc on traite ce cas*/
                     if(mystrcmp(tk,"FR_fr")==0){
