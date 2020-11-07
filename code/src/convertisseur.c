@@ -9,7 +9,7 @@
 //tableau des différents dialecte
 static  char *dialecte;
 dialecte=malloc(2 *sizeof(char));
-dialecte[]={"FR_fr","FR_be"}
+dialecte[]={"FR_fr","FR_be"};
 
 //fonction pour afficher les dialecte disponible
 void static affichageDesDilacteDiponible(){
