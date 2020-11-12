@@ -6,13 +6,13 @@ LINK_DIRECTORIES(/lib/libyaml.so)
 
 #add_executable(testLecture testLecture.c)
 
-add_executable(convertisseur  convertisseur.c convertisseur.h)
+add_executable(chiffreEnLettre  chiffreEnLettre.c chiffreEnLettre.h)
 
-#target_link_libraries(testLecture libyaml.so)
+target_link_libraries(chiffreEnLettre libyaml.so)
 
 
 install(
-    TARGETS convertisseur
+    TARGETS chiffreEnLettre
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     RUNTIME DESTINATION bin

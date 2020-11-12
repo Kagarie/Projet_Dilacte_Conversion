@@ -1,7 +1,7 @@
 typedef  struct TabChiffreLettre TabChiffreLettre;
 struct TabChiffreLettre{
     int index;
-    struct* ChiffreLettre[];
+    struct ChiffreLettre[];
 };
 
 typedef struct ChiffreLettre ChiffreLettre;
