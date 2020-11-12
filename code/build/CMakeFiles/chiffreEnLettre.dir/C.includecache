@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/convertisseur.c
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre.c
 stdlib.h
 -
 stdio.h
@@ -17,12 +17,14 @@ string.h
 -
 yaml.h
 -
-./convertisseur.h
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/convertisseur.h
+./chiffreEnLettre.h
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre.h
 ./utils.h
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils.h
 
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/convertisseur.h
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre.h
 
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils.h
+string.h
+-
 

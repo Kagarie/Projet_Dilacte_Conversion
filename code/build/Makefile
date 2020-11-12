@@ -176,44 +176,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named convertisseur
+# Target rules for targets named chiffreEnLettre
 
 # Build rule for target.
-convertisseur: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 convertisseur
-.PHONY : convertisseur
+chiffreEnLettre: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chiffreEnLettre
+.PHONY : chiffreEnLettre
 
 # fast build rule for target.
-convertisseur/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/convertisseur.dir/build.make CMakeFiles/convertisseur.dir/build
-.PHONY : convertisseur/fast
+chiffreEnLettre/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chiffreEnLettre.dir/build.make CMakeFiles/chiffreEnLettre.dir/build
+.PHONY : chiffreEnLettre/fast
 
-convertisseur.o: convertisseur.c.o
+chiffreEnLettre.o: chiffreEnLettre.c.o
 
-.PHONY : convertisseur.o
+.PHONY : chiffreEnLettre.o
 
 # target to build an object file
-convertisseur.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/convertisseur.dir/build.make CMakeFiles/convertisseur.dir/convertisseur.c.o
-.PHONY : convertisseur.c.o
+chiffreEnLettre.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chiffreEnLettre.dir/build.make CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.o
+.PHONY : chiffreEnLettre.c.o
 
-convertisseur.i: convertisseur.c.i
+chiffreEnLettre.i: chiffreEnLettre.c.i
 
-.PHONY : convertisseur.i
+.PHONY : chiffreEnLettre.i
 
 # target to preprocess a source file
-convertisseur.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/convertisseur.dir/build.make CMakeFiles/convertisseur.dir/convertisseur.c.i
-.PHONY : convertisseur.c.i
+chiffreEnLettre.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chiffreEnLettre.dir/build.make CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.i
+.PHONY : chiffreEnLettre.c.i
 
-convertisseur.s: convertisseur.c.s
+chiffreEnLettre.s: chiffreEnLettre.c.s
 
-.PHONY : convertisseur.s
+.PHONY : chiffreEnLettre.s
 
 # target to generate assembly for a file
-convertisseur.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/convertisseur.dir/build.make CMakeFiles/convertisseur.dir/convertisseur.c.s
-.PHONY : convertisseur.c.s
+chiffreEnLettre.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chiffreEnLettre.dir/build.make CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.s
+.PHONY : chiffreEnLettre.c.s
 
 # Help Target
 help:
@@ -227,10 +227,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... convertisseur"
-	@echo "... convertisseur.o"
-	@echo "... convertisseur.i"
-	@echo "... convertisseur.s"
+	@echo "... chiffreEnLettre"
+	@echo "... chiffreEnLettre.o"
+	@echo "... chiffreEnLettre.i"
+	@echo "... chiffreEnLettre.s"
 .PHONY : help
 
 
