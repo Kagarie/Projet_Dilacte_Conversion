@@ -14,9 +14,30 @@ int static mystrcmp(const char* s1, const char* s2){
     while (s1[i-1] != 0);
     return 0;
 }
+// ma propre function strcat
+char* my_strcat(char* destination, const char* source)
+{
+	//calcul de la longueur minimum
+	char* ptr = destination + strlen(destination);
+    
+	// Appends characters of source to the destination string
+	while (*source != '\0')
+		*ptr++ = *source++;
+    
+	// ajout du caractère de fin de chaines
+	*ptr = '\0';
+	// on retourne la resultat des chaines 
+	return destination;
+}
+
 int main(void) {
+
+    char* str = (char*)calloc(20, 1);
+    char *diallect = "FR_fr";
+	my_strcat(str, diallect);
+	my_strcat(str, ".yaml");
     //ouverture du fichier
-    FILE* fh = fopen("FR_fr.yaml", "r");
+    FILE* fh = fopen(str, "r");
 
     //on vérifie si le fichier à bien était ouvert
     if (fh == NULL)

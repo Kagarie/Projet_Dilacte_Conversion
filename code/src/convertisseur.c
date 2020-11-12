@@ -5,18 +5,7 @@
 #include <yaml.h>
 
 #include "./convertisseur.h"
-
-//tableau des différents dialecte
-static  char *dialecte;
-dialecte=malloc(2 *sizeof(char));
-dialecte[]={"FR_fr","FR_be"};
-
-//fonction pour afficher les dialecte disponible
-void static affichageDesDilacteDiponible(){
-    puts("listes des dialectes disponible");
-    for(int i = 0 ; i<sizeof(*dialecte)-1 ;i++)
-        printf("%s\n",dialecte[i]);
-}
+#include "./utils.h"
 
 //explication de l'utilisation de la librairy
 void static usage(){
@@ -25,38 +14,86 @@ void static usage(){
     puts("-d -dialecte pour voir les dialecte disponible");
     exit(EXIT_SUCCESS);
 }
+//a faire 
+void affichageDialecte(const char* dialect[]){
 
-//fonction pour vérifier que deux chaines soient exactement identique
-int static mystrcmp(const char* s1, const char* s2){
-    int i = 0;
-    do
-    {
-        if (s1[i] != s2[i])
-            return 1;
-        i++;
-    }
-    while (s1[i-1] != 0);
-    return 0;
 }
+
 //on vérifie si le dialecte est bien présent 
 bool static verifDialecte(char* commande){
         int i = 0 ; 
         bool present =false;
-        while(i<sizeof(dialecte) || present){
+        //refaire cette fonction après avoir fini avec le tableau
+        /*while(i<sizeof(dialecte) || present){
             if(mystrcmp(commande,dialecte[i])==0){
             present=true;
             }
             i+=1;
-        }
+        }*/
         //si le dialecte n'est pas présent on affiche les dialectes présent et on sort du programme
         if(!present){
         puts("dialecte attendu");
-        affichageDesDilacteDiponible();
         return false;
         }
     //si le dialecte et présent on peut continuer le traitement
     return true;
     }
+
+void yaml(const char* dialecte){
+
+    //création du nom de feuille à chercher
+    char* str = (char*)calloc(20, 1);
+	my_strcat(str, dialecte);
+	my_strcat(str, ".yaml");
+    //ouverture du fichier
+    FILE* fh = fopen(str, "r");
+
+    //on vérifie si le fichier à bien était ouvert
+    if (fh == NULL)
+      fputs("Erreur ouvertur yaml!\n", stderr);
+
+    //initialisation du parser et token
+    yaml_parser_t parser;
+    yaml_token_t token;
+   
+    //erreur si l'initialisation échoue
+    if (!yaml_parser_initialize(&parser))
+        fputs("Erreur initialisation parser!\n", stderr);
+  
+    //on place le paser au début du fichier à lire
+    yaml_parser_set_input_file(&parser, fh);
+
+    char* tk;
+    //on boucle tout le long du fichier
+    do {
+        yaml_parser_scan(&parser, &token);
+        switch(token.type) {
+            /*il existe d'autre méthode mais dans autre cas seul 
+            le YAML_SCALAR_TOKEN nous intéresse*/
+                case YAML_SCALAR_TOKEN: 
+                //on récupére chaques éléments du fichier 
+                tk=token.data.scalar.value;
+                /*le premier élèment récupérer et le nom du dialecte
+                dans autre cas il nouos servira plus donc on traite ce cas*/
+                    if(mystrcmp(tk,"FR_fr")==0){
+                        puts("premier élèment");
+                    }else{
+                        //on s'occupe ensuite des éléèments qui nous interresse 
+                        printf("%s ", tk);
+                    }
+                 break;
+           default:break;
+           }
+       if (token.type != YAML_STREAM_END_TOKEN)
+           yaml_token_delete(&token);
+   } while (token.type != YAML_STREAM_END_TOKEN);
+   puts("");
+   //on libère notre token et notre parser
+   yaml_token_delete(&token);
+   yaml_parser_delete(&parser);
+   //on en a fini avec le fichier
+   fclose(fh);
+}
 
 int main (int argc, char* argv[]){
     
@@ -66,7 +103,7 @@ int main (int argc, char* argv[]){
      usage();
     }
     if(mystrcmp(argv[1],"-d") ==0|| mystrcmp(argv[1],"-dialecte")==0){
-        affichageDesDilacteDiponible();
+       // affichageDesDilacteDiponible();
     }
   
     //Si le paramètre n'est pas une commande on test si c'est un dialecte 
@@ -84,7 +121,12 @@ int main (int argc, char* argv[]){
     /*
         Si tous les tests précédents sont bien passé nous pouvons passé en 
         phase de la traitement de la demande 
+    
+        Dans premier temps on charge dans un tableau le dialecte par défaut
+        Puis dans un second tableau le dialecte demandé 
+        Après on traite la demande si ce n'est pas présent dans le dialecte demandé on va chercher dans le tableau par défaut 
     */
+   yaml("FR_fr");
   
 return EXIT_SUCCESS;
 }

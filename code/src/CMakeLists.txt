@@ -1,7 +1,14 @@
 cmake_minimum_required(VERSION 3.0)
 project(Convertisseur_chiffre)
 
-add_executable(convertisseur  convertisseur.c convertisseur.h convertisseur.inc)
+INCLUDE_DIRECTORIES(/lib/)
+LINK_DIRECTORIES(/lib/libyaml.so)
+add_executable(testLecture testLecture.c)
+
+add_executable(convertisseur  convertisseur.c convertisseur.h)
+
+target_link_libraries(testLecture libyaml.so)
+
 
 install(
     TARGETS convertisseur
