@@ -4,7 +4,7 @@
 #include <string.h>
 #include <yaml.h>
 
-#include "./convertisseur.h"
+#include "./chiffreEnLettre.h"
 #include "./utils.h"
 
 //explication de l'utilisation de la librairy
@@ -40,6 +40,8 @@ bool static verifDialecte(char* commande){
     }
 
 void yaml(const char* dialecte){
+    struct TabChiffreLettre tabData;
+    tabData.index=0:
 
     //création du nom de feuille à chercher
     char* str = (char*)calloc(20, 1);
@@ -50,7 +52,7 @@ void yaml(const char* dialecte){
 
     //on vérifie si le fichier à bien était ouvert
     if (fh == NULL)
-      fputs("Erreur ouvertur yaml!\n", stderr);
+      fputs("Error  open yaml!\n", stderr);
 
     //initialisation du parser et token
     yaml_parser_t parser;
@@ -80,6 +82,9 @@ void yaml(const char* dialecte){
                     }else{
                         //on s'occupe ensuite des éléèments qui nous interresse 
                         printf("%s ", tk);
+                        tabData.index+=1;
+                        struct ChiffreLettre chif;
+                        chif.nombre=tk;
                     }
                  break;
            default:break;
@@ -87,7 +92,6 @@ void yaml(const char* dialecte){
        if (token.type != YAML_STREAM_END_TOKEN)
            yaml_token_delete(&token);
    } while (token.type != YAML_STREAM_END_TOKEN);
-   puts("");
    //on libère notre token et notre parser
    yaml_token_delete(&token);
    yaml_parser_delete(&parser);
@@ -117,7 +121,6 @@ int main (int argc, char* argv[]){
         printf("entier attendu\n");
         exit(EXIT_FAILURE);
     }
-
     /*
         Si tous les tests précédents sont bien passé nous pouvons passé en 
         phase de la traitement de la demande 

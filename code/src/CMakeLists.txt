@@ -3,11 +3,12 @@ project(Convertisseur_chiffre)
 
 INCLUDE_DIRECTORIES(/lib/)
 LINK_DIRECTORIES(/lib/libyaml.so)
-add_executable(testLecture testLecture.c)
+
+#add_executable(testLecture testLecture.c)
 
 add_executable(convertisseur  convertisseur.c convertisseur.h)
 
-target_link_libraries(testLecture libyaml.so)
+#target_link_libraries(testLecture libyaml.so)
 
 
 install(

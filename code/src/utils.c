@@ -6,12 +6,13 @@ char* my_strcat(char* destination, const char* source)
 	//calcul de la longueur minimum
 	char* ptr = destination + strlen(destination);
     
-	// Appends characters of source to the destination string
+	// on ajoute les caractères
 	while (*source != '\0')
 		*ptr++ = *source++;
     
 	// ajout du caractère de fin de chaines
 	*ptr = '\0';
+
 	// on retourne la resultat des chaines 
 	return destination;
 }
