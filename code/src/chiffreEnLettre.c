@@ -15,14 +15,17 @@ char chiffreEnLettre_get_mot(const ChiffreEnLettre *chiffreEnLettre) {
     return chiffreEnLettre->nombreEnLettre;
 }
 
+//On ajoute les valeurs à notre structure
 static struct ChiffreEnLettre *_fill(ChiffreEnLettre *chiffreEnLettre, const unsigned nombre, const char mot) {
     chiffreEnLettre->nombre = nombre;
     chiffreEnLettre->nombreEnLettre = mot;
     return chiffreEnLettre;
 }
 
+//On déclare notre structure
 static ChiffreEnLettre *_create(const unsigned int nombre, const char mot) {
     ChiffreEnLettre *chiffreEnLettre = chiffreEnLettre_malloc(sizeof *chiffreEnLettre);
+    //Si la déclartion c'est bien passé on peut lui allouer les valeurs
     if (chiffreEnLettre) {
         return _fill(chiffreEnLettre, nombre, mot);
     } else {
@@ -30,6 +33,15 @@ static ChiffreEnLettre *_create(const unsigned int nombre, const char mot) {
     }
 }
 
-void chiffreEnLettre_destroy(ChiffreEnLettre *chiffreEnLettre){
+struct ChiffreEnLettre *chiffreEnLettre_create_full(const int nombre, const char mot) {
+    ChiffreEnLettre *chiffreEnLettre = chiffreEnLettre_malloc(sizeof((chiffreEnLettre)));
+    if(chiffreEnLettre){
+        return _fill(chiffreEnLettre,nombre,mot);
+    }else{
+        return NULL;
+    }
+}
+
+void chiffreEnLettre_destroy(ChiffreEnLettre *chiffreEnLettre) {
     chiffreEnLettre_free(chiffreEnLettre);
 }
