@@ -1,1 +1,0 @@
-/usr/bin/cc -rdynamic CMakeFiles/testLecture.dir/testLecture.c.o -o testLecture   -L/lib/libyaml.so  -Wl,-rpath,/lib/libyaml.so -lyaml 
