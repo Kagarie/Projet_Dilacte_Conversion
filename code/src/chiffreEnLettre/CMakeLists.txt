@@ -1,9 +1,6 @@
-add_library(chiffreEnLettre SHARED chiffreEnLettre.h chiffreEnLettre.c chiffreEnLettre.inc)
-install(TARGETS chiffreEnLettre DESTINATION lib)
-file(GLOB
-        headers
-        *.hp
-        )
-
-install(FILES ${headers}
-        DESTINATION include/${CMAKE_PROJECT_NAME})
+include(GNUInstallDirs)
+add_library(chiffreEnLettre SHARED chiffreEnLettre.inc chiffreEnLettre.c chiffreEnLettre.h)
+set_target_properties(chiffreEnLettre PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
+configure_file(chiffreEnLettre.pc.in chiffreEnLettre.pc @ONLY)
+install(TARGETS chiffreEnLettre LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(FILES ${CMAKE_BINARY_DIR}/ChiffreEnLettre.pc DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
