@@ -43,8 +43,8 @@ needs_sphinx = '3.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['breathe']
-breathe_projects = { "test2": os.getenv('DOXYGEN_OUTPUT_DIR') + "/xml/" }
-breathe_default_project = "test2"
+breathe_projects = { "Projet_Dilacte_Conversion": os.getenv('DOXYGEN_OUTPUT_DIR') + "/xml/" }
+breathe_default_project = "Projet_Dilacte_Conversion"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -59,9 +59,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'test2'
+project = 'Projet_Dilacte_Conversion'
 copyright = '2020'
-author = 'Laurie'
+author = 'Groupe1'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -116,7 +116,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'test2doc'
+htmlhelp_basename = 'Projet_Dilacte_ConversionDocs'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -143,8 +143,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'test2.tex', 'test2 Documentation',
-     'laurie', 'manual'),
+    (master_doc, 'Projet_Dilacte_Conversion.tex', 'Projet_Dilacte_Conversion Documentation',
+     'Groupe1', 'manual'),
 ]
 
 
@@ -153,7 +153,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'test2', 'test2 Documentation',
+    (master_doc, 'Projet_Dilacte_Conversion', 'Projet_Dilacte_Conversion Documentation',
      [author], 1)
 ]
 
@@ -164,8 +164,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'test2', 'test2 Documentation',
-     author, 'test2', 'One line description of project.',
+    (master_doc, 'Projet_Dilacte_Conversion', 'Projet_Dilacte_Conversion Documentation',
+     author, 'Projet_Dilacte_Conversion', 'One line description of project.',
      'Miscellaneous'),
 ]
 

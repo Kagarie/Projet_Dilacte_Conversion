@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(Convertisseur_chiffre)
+project(Projet_Dilacte_Conversion)
 
 add_executable(convertisseur  convertisseur.c convertisseur.h convertisseur.inc)
 

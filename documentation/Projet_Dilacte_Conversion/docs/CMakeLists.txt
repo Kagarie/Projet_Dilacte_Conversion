@@ -22,7 +22,7 @@ if(SPHINX_EXECUTABLE AND DOXYGEN_EXECUTABLE)
 	)
 
 	install(
-		DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html
+		DIRECTORY ../../build/docs/html
 		DESTINATION share/docs
 		COMPONENT "Docs"
 	)
