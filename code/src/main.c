@@ -4,8 +4,8 @@
 #include <string.h>
 #include <yaml.h>
 
-#include "./chiffreEnLettre.h"
-#include "./utils.h"
+#include "./tabData/tabData.h"
+#include "./utils/utils.h"
 
 
 //explication de l'utilisation de la librairy
@@ -65,10 +65,10 @@ void yaml(const char *dialecte) {
     yaml_parser_set_input_file(&parser, fh);
 
     //si tout c'est bien passé on peux déclarer nos structure
-    struct TabChiffreLettre tabData;
+   /* struct TabChiffreLettre tabData;
     tabData.index = 0;
     struct ChiffreLettre chifData;
-
+    */
     //on déclare aussi une variable qui va nous servir à récupérer les données
     char *tk;
     //on boucle tout le long du fichier
@@ -83,7 +83,7 @@ void yaml(const char *dialecte) {
                 /*le premier élèment récupérer et le nom du dialecte
                 dans autre cas il nouos servira plus donc on traite ce cas*/
 
-                tabData.index += 1;
+                //tabData.index += 1;
 
                 break;
                 /* Token types (read before actual token) */
@@ -93,13 +93,13 @@ void yaml(const char *dialecte) {
                 else {
                     //on s'occupe ensuite des éléèments qui nous interresse
                     printf("%s ", tk);
-                    chifData.nombre = tk;
+                    //chifData.nombre = tk;
                 }
                 break;
             case YAML_VALUE_TOKEN:
                 //printf("(Value token) ");
                 printf("(Value token) ");
-                chifData.nombreEnLettre = tk;
+                //chifData.nombreEnLettre = tk;
                 break;
             default:
                 break;
@@ -137,13 +137,16 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
     /*
-        Si tous les tests précédents sont bien passé nous pouvons passé en
-        phase de la traitement de la demande
+        Si tous les tests précédents sont bien passé nous pouvons passer en
+        phase de traitement de la demande
 
-        Dans premier temps on charge dans un tableau le dialecte par défaut
-        Puis dans un second tableau le dialecte demandé
-        Après on traite la demande si ce n'est pas présent dans le dialecte demandé on va chercher dans le tableau par défaut
+        Dans premier temps on charge dans un tableau le dilacte par défaut
+        Puis dans un second tableau le dilacte demandé
+        Après on traite la demande si ce n'est pas présent dans le dilacte demandé on va chercher dans le tableau par défaut
     */
+
+    printf("test : ", argv[1]);
+    //le dilacte FR_fr nous servira de référence
     yaml("FR_fr");
 
     return EXIT_SUCCESS;

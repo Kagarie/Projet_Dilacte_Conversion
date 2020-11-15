@@ -52,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/CMakeFiles/main.dir/DependInfo.cmake"
   "src/utils/CMakeFiles/test-mystrcmp.dir/DependInfo.cmake"
   "src/utils/CMakeFiles/test-my_strcat.dir/DependInfo.cmake"
   "src/utils/CMakeFiles/utils.dir/DependInfo.cmake"
