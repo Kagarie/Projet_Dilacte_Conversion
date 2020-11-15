@@ -1,4 +1,4 @@
-# Install script for directory: /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre
+# Install script for directory: /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

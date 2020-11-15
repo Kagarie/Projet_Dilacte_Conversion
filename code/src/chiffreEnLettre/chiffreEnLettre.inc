@@ -1,5 +1,5 @@
 //Ceci est notre structre de base
 struct _ChiffreEnLettre{
-    unsigned int nombre;
-    char  mot;
+    int nombre;
+    char* mot;
 };

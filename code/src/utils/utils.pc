@@ -1,0 +1,9 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+Name: Convertsseur
+Description: ChiffreEnLettre ma library projet de C
+Version: 0.0.1
+Requires: 3.0
+Libs: -L${libdir} -lmylib Cflags: -I${includedir}

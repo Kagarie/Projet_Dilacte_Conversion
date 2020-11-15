@@ -75,52 +75,6 @@ CMAKE_BINARY_DIR = /home/aymeric/code/C/Projet_Dilacte_Conversion/code
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -176,6 +130,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/chiffreEnLettre/CMakeFiles/test-get.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/chiffreEnLettre/CMakeFiles/test-get.dir/rule
+.PHONY : src/chiffreEnLettre/CMakeFiles/test-get.dir/rule
+
+# Convenience name for target.
+test-get: src/chiffreEnLettre/CMakeFiles/test-get.dir/rule
+
+.PHONY : test-get
+
+# fast build rule for target.
+test-get/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-get.dir/build.make src/chiffreEnLettre/CMakeFiles/test-get.dir/build
+.PHONY : test-get/fast
+
+# Convenience name for target.
+src/chiffreEnLettre/CMakeFiles/test-creat.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/chiffreEnLettre/CMakeFiles/test-creat.dir/rule
+.PHONY : src/chiffreEnLettre/CMakeFiles/test-creat.dir/rule
+
+# Convenience name for target.
+test-creat: src/chiffreEnLettre/CMakeFiles/test-creat.dir/rule
+
+.PHONY : test-creat
+
+# fast build rule for target.
+test-creat/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-creat.dir/build.make src/chiffreEnLettre/CMakeFiles/test-creat.dir/build
+.PHONY : test-creat/fast
+
+# Convenience name for target.
 src/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/rule:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/rule
 .PHONY : src/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/rule
@@ -217,6 +201,60 @@ chiffreEnLettre.c.s:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/build.make src/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.s
 .PHONY : chiffreEnLettre.c.s
 
+test-creat.o: test-creat.c.o
+
+.PHONY : test-creat.o
+
+# target to build an object file
+test-creat.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-creat.dir/build.make src/chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.o
+.PHONY : test-creat.c.o
+
+test-creat.i: test-creat.c.i
+
+.PHONY : test-creat.i
+
+# target to preprocess a source file
+test-creat.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-creat.dir/build.make src/chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.i
+.PHONY : test-creat.c.i
+
+test-creat.s: test-creat.c.s
+
+.PHONY : test-creat.s
+
+# target to generate assembly for a file
+test-creat.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-creat.dir/build.make src/chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.s
+.PHONY : test-creat.c.s
+
+test-get.o: test-get.c.o
+
+.PHONY : test-get.o
+
+# target to build an object file
+test-get.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-get.dir/build.make src/chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.o
+.PHONY : test-get.c.o
+
+test-get.i: test-get.c.i
+
+.PHONY : test-get.i
+
+# target to preprocess a source file
+test-get.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-get.dir/build.make src/chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.i
+.PHONY : test-get.c.i
+
+test-get.s: test-get.c.s
+
+.PHONY : test-get.s
+
+# target to generate assembly for a file
+test-get.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code && $(MAKE) $(MAKESILENT) -f src/chiffreEnLettre/CMakeFiles/test-get.dir/build.make src/chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.s
+.PHONY : test-get.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -224,15 +262,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... chiffreEnLettre"
+	@echo "... test-creat"
+	@echo "... test-get"
 	@echo "... chiffreEnLettre.o"
 	@echo "... chiffreEnLettre.i"
 	@echo "... chiffreEnLettre.s"
+	@echo "... test-creat.o"
+	@echo "... test-creat.i"
+	@echo "... test-creat.s"
+	@echo "... test-get.o"
+	@echo "... test-get.i"
+	@echo "... test-get.s"
 .PHONY : help
 
 

@@ -15,10 +15,10 @@ extern void (*chiffreEnLettre_free)(void *ptr);
 extern unsigned int chiffreEnLettre_get_nombre(const ChiffreEnLettre *chiffreEnLettre);
 
 //On return le mot de la structure
-extern char chiffreEnLettre_get_mot(const ChiffreEnLettre *chiffreEnLettre);
+extern char *chiffreEnLettre_get_mot(const ChiffreEnLettre *chiffreEnLettre);
 
 //Fonction pour créer notre sturcture
-extern ChiffreEnLettre *chiffreEnLettre_create_full(const int nombre, const char mot);
+extern ChiffreEnLettre *chiffreEnLettre_create_full(const int nombre, char* mot);
 
 //On détruit la mémoire et on libère la mémoire
 extern void chiffreEnLettre_destroy(ChiffreEnLettre *chiffreEnLettre);

@@ -1,11 +1,7 @@
 include(GNUInstallDirs)
-add_library(chiffreEnLettre SHARED chiffreEnLettre.inc chiffreEnLettre.c chiffreEnLettre.h)
-set_target_properties(chiffreEnLettre PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
-configure_file(chiffreEnLettre.pc.in chiffreEnLettre.pc @ONLY)
-
-#add_executable(chiffreEnLettre chiffreEnLettre.c chiffreEnLettre.h chiffreEnLettre.inc)
-#add_library(chiffreEnLettre SHARED chiffreEnLettre.h chiffreEnLettre.c chiffreEnLettre.inc)
-
+add_library(utils SHARED utils.c utils.h)
+set_target_properties(utils PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
+configure_file(utils.pc.in  utils.pc @ONLY)
 
 enable_testing()
 
@@ -22,12 +18,12 @@ foreach (FILENAME ${FILES})
     # et sans le suffixe
     get_filename_component(TEST ${FILENAME} NAME_WE)
     # Ajout d'un exécutable dépendant également de chiffreEnLettre.h
-    add_executable(${TEST} ${SRC} chiffreEnLettre.h)
+    add_executable(${TEST} ${SRC} utils.h)
     # Précision de l'ordre de construction: le programme de test doit se faire
     # après la librairie
-    add_dependencies(${TEST} chiffreEnLettre)
+    add_dependencies(${TEST} utils)
     # Assemblage du programme de test avec la librairie chiffreEnLettre
-    target_link_libraries(${TEST} chiffreEnLettre)
+    target_link_libraries(${TEST} utils)
     if (VALGRIND)
         # Ajout d'un test en utilisant valgrind
         add_test("${TEST}[valgrind]" ${VALGRIND} --leak-check=full --quiet --error-exitcode=1 ./${TEST})
