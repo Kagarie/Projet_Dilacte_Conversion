@@ -88,7 +88,7 @@ void yaml(const char *dialecte) {
                 break;
                 /* Token types (read before actual token) */
             case YAML_KEY_TOKEN:
-                if (mystrcmp(tk, "FR_fr") == 0)
+                if (mystrcmp(tk, dialecte) == 0)
                     puts("premier élèment");
                 else {
                     //on s'occupe ensuite des éléèments qui nous interresse

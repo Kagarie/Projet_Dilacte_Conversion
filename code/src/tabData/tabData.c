@@ -1,8 +1,8 @@
 #include "./tabData.h"
-#include "./tabData.inc"
+#include "tabData.inc"
 
 
-TabData *tabData_create(const unsigned int index, const unsigned int nombre, const char mot) {
+TabData *tabData_create(const unsigned int index, const unsigned int nombre,char* mot) {
     TabData *tabData = malloc(sizeof(TabData));
     if (tabData) {
         tabData->index = index;
@@ -28,6 +28,6 @@ unsigned int tabData_get_nombre(const TabData *tabData) {
     return chiffreEnLettre_get_nombre(tabData->chiffreEnLettre);
 }
 
-char tabData_get_mot(const TabData *tabData) {
+char *tabData_get_mot(const TabData *tabData) {
     return chiffreEnLettre_get_mot(tabData->chiffreEnLettre);
 }

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libtabData.so.1 -o libtabData.so.0.0.1 CMakeFiles/tabData.dir/tabData.c.o 
