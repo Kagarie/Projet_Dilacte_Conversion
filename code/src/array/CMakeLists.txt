@@ -1,7 +1,7 @@
 include(GNUInstallDirs)
 add_library(tabData SHARED tabData.inc tabData.h tabData.c)
 set_target_properties(tabData PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
-configure_file(../utils/tabData.pc.in ../utils/tabData.pc @ONLY)
+configure_file(../utils/array.pc.in ../utils/array.pc @ONLY)
 
 
 enable_testing()
@@ -19,12 +19,12 @@ foreach (FILENAME ${FILES})
     # et sans le suffixe
     get_filename_component(TEST ${FILENAME} NAME_WE)
     # Ajout d'un exécutable dépendant également de tabData.h
-    add_executable(${TEST} ${SRC} tabData.h)
+    add_executable(${TEST} ${SRC} array.h)
     # Précision de l'ordre de construction: le programme de test doit se faire
     # après la librairie
     add_dependencies(${TEST} chiffreEnLettre)
     # Assemblage du programme de test avec la librairie tabData
-    target_link_libraries(${TEST} tabData)
+    target_link_libraries(${TEST} array)
     if (VALGRIND)
         # Ajout d'un test en utilisant valgrind
         add_test("${TEST}[valgrind]" ${VALGRIND} --leak-check=full --quiet --error-exitcode=1 ./${TEST})

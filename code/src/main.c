@@ -147,6 +147,7 @@ int main(int argc, char *argv[]) {
 
     printf("test : ", argv[1]);
     //le dilacte FR_fr nous servira de référence
+    //il permet de faire une array qui contient des structures
     yaml("FR_fr");
 
     return EXIT_SUCCESS;
