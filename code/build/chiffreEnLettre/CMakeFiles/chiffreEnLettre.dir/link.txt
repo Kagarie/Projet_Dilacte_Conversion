@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libchiffreEnLettre.so.1 -o libchiffreEnLettre.so.0.0.1 CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.o   -L/usr/local/lib/dilacte  -Wl,-rpath,:::::::::::::::::::::: 

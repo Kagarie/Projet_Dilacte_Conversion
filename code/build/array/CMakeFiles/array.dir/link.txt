@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libarray.so.1 -o libarray.so.0.0.1 CMakeFiles/array.dir/array.c.o   -L/usr/local/lib/dilacte  -Wl,-rpath,/usr/local/lib/dilacte: -lchiffreEnLettre 

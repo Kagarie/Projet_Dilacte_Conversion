@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/test-mystrcmp.c
+stdlib.h
+-
+stdio.h
+-
+assert.h
+-
+./utils.h
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/utils.h
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/utils.h
+string.h
+-
+

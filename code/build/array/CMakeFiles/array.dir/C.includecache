@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/array.c
+./array.h
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/array.h
+./array.inc
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/array.inc
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/array.h
+stddef.h
+-
+stdlib.h
+-
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/array.inc
+
