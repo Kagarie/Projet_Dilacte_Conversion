@@ -34,3 +34,16 @@ foreach (FILENAME ${FILES})
         add_test("${TEST}" ./${TEST})
     endif ()
 endforeach ()
+
+install(
+        TARGETS utils
+        LIBRARY DESTINATION lib/dilacte
+        #ARCHIVE DESTINATION lib/dilacte
+        #RUNTIME DESTINATION bin/dilacte
+)
+
+install(
+        FILES utils.h
+        DESTINATION include/dilacte
+)
+

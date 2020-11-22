@@ -20,5 +20,5 @@ extern char *chiffreEnLettre_get_mot(const ChiffreEnLettre *chiffreEnLettre);
 //Fonction pour créer notre sturcture
 extern ChiffreEnLettre *chiffreEnLettre_create_full(const int nombre, char* mot);
 
-//On détruit la mémoire et on libère la mémoire
+//On détruit la structure et on libère la mémoire
 extern void chiffreEnLettre_destroy(ChiffreEnLettre *chiffreEnLettre);

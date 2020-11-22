@@ -1,12 +1,11 @@
-include(GNUInstallDirs)
-add_library(chiffreEnLettre SHARED chiffreEnLettre.inc chiffreEnLettre.c chiffreEnLettre.h)
-set_target_properties(chiffreEnLettre PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
+# on créait une varaible SRCS qui contient les feuilles chiffreEnLettre.insc/.h/.c
+set(SRCS chiffreEnLettre.c)
+set(HEADERS chiffreEnLettre.h)
+set(INCS chiffreEnLettre.inc)
+add_library(chiffreEnLettre SHARED  ${SRCS} ${HEADERS} ${INCS})
+
 configure_file(chiffreEnLettre.pc.in chiffreEnLettre.pc @ONLY)
-
-#add_executable(chiffreEnLettre chiffreEnLettre.c chiffreEnLettre.h chiffreEnLettre.inc)
-#add_library(chiffreEnLettre SHARED chiffreEnLettre.h chiffreEnLettre.c chiffreEnLettre.inc)
-
-
+set_target_properties(chiffreEnLettre PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
 enable_testing()
 
 find_program(VALGRIND "valgrind")
@@ -38,3 +37,15 @@ foreach (FILENAME ${FILES})
         add_test("${TEST}" ./${TEST})
     endif ()
 endforeach ()
+
+install(
+        TARGETS chiffreEnLettre
+        LIBRARY DESTINATION lib/dilacte
+        ARCHIVE DESTINATION lib/dilacte
+        RUNTIME DESTINATION bin/dilacte
+)
+
+install(
+        FILES chiffreEnLettre.h
+        DESTINATION include/dilacte/
+)

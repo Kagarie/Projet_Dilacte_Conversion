@@ -4,7 +4,7 @@
 #include <string.h>
 #include <yaml.h>
 
-#include "./tabData/tabData.h"
+#include "./array/array.h"
 #include "./utils/utils.h"
 
 
@@ -65,10 +65,10 @@ void yaml(const char *dialecte) {
     yaml_parser_set_input_file(&parser, fh);
 
     //si tout c'est bien passé on peux déclarer nos structure
-   /* struct TabChiffreLettre tabData;
-    tabData.index = 0;
-    struct ChiffreLettre chifData;
-    */
+    /* struct TabChiffreLettre tabData;
+     tabData.index = 0;
+     struct ChiffreLettre chifData;
+     */
     //on déclare aussi une variable qui va nous servir à récupérer les données
     char *tk;
     //on boucle tout le long du fichier

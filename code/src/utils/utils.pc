@@ -1,5 +1,5 @@
-prefix=/usr/local
-exec_prefix=/usr/local
+prefix=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
+exec_prefix=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 Name: Convertsseur

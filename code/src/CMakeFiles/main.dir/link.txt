@@ -1,1 +1,0 @@
-/usr/bin/cc -rdynamic CMakeFiles/main.dir/main.c.o -o main   -L/lib/libyaml.so  -Wl,-rpath,/lib/libyaml.so: -lyaml -lutils/libutils.so 
