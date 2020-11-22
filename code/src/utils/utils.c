@@ -17,7 +17,7 @@ char* my_strcat(char* destination, const char* source)
 	return destination;
 }
 
-//fonction pour vérifier que deux chaines soient exactement identique
+
 int  mystrcmp(const char* s1, const char* s2){
     int i = 0;
     do
