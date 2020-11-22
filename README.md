@@ -4,4 +4,6 @@ Partie chiffrEnLettre terminée ainsi. Il reste plus qu'a résoudre le problème
 
 
 ## Test : 
-	En ce qui concerne les tests. Les tests sur la lib chiffreEnLettre et la lib utils on était effectué. Il ne reste donc que ceux pour l'array et le main une fois le code terminé.
+
+En ce qui concerne les tests. Les tests sur la lib chiffreEnLettre et la lib utils on était effectué.
+Il ne reste donc que ceux pour l'array et le main une fois le code terminé.
