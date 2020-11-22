@@ -1,10 +1,7 @@
 # Projet_Dialecte_Conversion
 
-Pour le moment il n'y a qu'un dossier pour le code 
-On fera un point pour la répartition des taches et je ferai des branch pour chaque partie
+Partie chiffrEnLettre terminée ainsi. Il reste plus qu'a résoudre le problème pour lié la lib chiffreEnLettre à la structure de l'array. Une fois cela fait il faut que termine la partie array et j'aurai terminé ma partie.
 
-Tout évoluera au cour du projet même le README ce n'est qu'une première ébauche
-On fera un point sur l'utiliation du README aussi
 
-## Correction à apporter avant d'aller plus loin : 
-- Pour fix l'erreur il faut allouer de la mémoir au tableau problème le tableau est considéré comme une constante ...
+## Test : 
+	En ce qui concerne les tests. Les tests sur la lib chiffreEnLettre et la lib utils on était effectué. Il ne reste donc que ceux pour l'array et le main une fois le code terminé.
