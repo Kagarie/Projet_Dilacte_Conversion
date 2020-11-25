@@ -1,1 +1,0 @@
-/usr/bin/cc -g -rdynamic CMakeFiles/test-my_strcat.dir/test-my_strcat.c.o -o test-my_strcat   -L/usr/local/lib/dilacte  -Wl,-rpath,/usr/local/lib/dilacte:/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/utils libutils.so 
