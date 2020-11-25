@@ -98,7 +98,7 @@ test__my_strcat_EXTERNAL_OBJECTS =
 
 utils/test-my_strcat: utils/CMakeFiles/test-my_strcat.dir/test-my_strcat.c.o
 utils/test-my_strcat: utils/CMakeFiles/test-my_strcat.dir/build.make
-utils/test-my_strcat: utils/libutils.so.0.0.1
+utils/test-my_strcat: utils/libutils.so
 utils/test-my_strcat: utils/CMakeFiles/test-my_strcat.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test-my_strcat"
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-my_strcat.dir/link.txt --verbose=$(VERBOSE)

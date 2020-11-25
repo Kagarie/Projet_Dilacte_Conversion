@@ -98,7 +98,7 @@ test__mystrcmp_EXTERNAL_OBJECTS =
 
 utils/test-mystrcmp: utils/CMakeFiles/test-mystrcmp.dir/test-mystrcmp.c.o
 utils/test-mystrcmp: utils/CMakeFiles/test-mystrcmp.dir/build.make
-utils/test-mystrcmp: utils/libutils.so.0.0.1
+utils/test-mystrcmp: utils/libutils.so
 utils/test-mystrcmp: utils/CMakeFiles/test-mystrcmp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test-mystrcmp"
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-mystrcmp.dir/link.txt --verbose=$(VERBOSE)

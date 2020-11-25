@@ -6,17 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.c
-./chiffreEnLettre.inc
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.inc
-./chiffreEnLettre.h
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.h
-
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.h
-stddef.h
--
-stdlib.h
--
-
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.inc
-

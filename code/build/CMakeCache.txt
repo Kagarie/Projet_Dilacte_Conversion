@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+Array_BINARY_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array
+
+//Value Computed by CMake
+Array_SOURCE_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -288,6 +294,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
 //Value Computed by CMake
+ChiffreEnLettre_BINARY_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre
+
+//The directory containing a CMake configuration file for ChiffreEnLettre.
+ChiffreEnLettre_DIR:PATH=/usr/local/cmake
+
+//Value Computed by CMake
+ChiffreEnLettre_SOURCE_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre
+
+//Value Computed by CMake
 Convertisseur_BINARY_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
 
 //Value Computed by CMake
@@ -311,11 +326,14 @@ Project_BINARY_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/bu
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src
 
+//Value Computed by CMake
+Utils_BINARY_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils
+
+//Value Computed by CMake
+Utils_SOURCE_DIR:STATIC=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils
+
 //Path to a program.
 VALGRIND:FILEPATH=/usr/bin/valgrind
-
-//Dependencies for the target
-array_LIB_DEPENDS:STATIC=general;libchiffreEnLettre.so;
 
 
 ########################
@@ -462,7 +480,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -43,59 +43,37 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so.0.0.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so.1"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "/usr/local/lib/dilacte")
-    endif()
-  endforeach()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/dilacte" TYPE SHARED_LIBRARY FILES
-    "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/libchiffreEnLettre.so.0.0.1"
-    "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/libchiffreEnLettre.so.1"
-    )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so.0.0.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so.1"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "::::::::::::::::::::::"
-           NEW_RPATH "/usr/local/lib/dilacte")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so"
          RPATH "/usr/local/lib/dilacte")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/dilacte" TYPE SHARED_LIBRARY FILES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/libchiffreEnLettre.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/libchiffreEnLettre.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so"
          OLD_RPATH "::::::::::::::::::::::"
          NEW_RPATH "/usr/local/lib/dilacte")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/dilacte/libchiffreEnLettre.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libchiffreEnLettre.so")
     endif()
   endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/dilacte" TYPE FILE FILES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xPkgConfigx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig" TYPE FILE FILES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/chiffreEnLettre.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/ChiffreEnLettreConfig.cmake")
 endif()
 

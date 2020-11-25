@@ -98,7 +98,7 @@ test__get_EXTERNAL_OBJECTS =
 
 chiffreEnLettre/test-get: chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.o
 chiffreEnLettre/test-get: chiffreEnLettre/CMakeFiles/test-get.dir/build.make
-chiffreEnLettre/test-get: chiffreEnLettre/libchiffreEnLettre.so.0.0.1
+chiffreEnLettre/test-get: chiffreEnLettre/libchiffreEnLettre.so
 chiffreEnLettre/test-get: chiffreEnLettre/CMakeFiles/test-get.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test-get"
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-get.dir/link.txt --verbose=$(VERBOSE)

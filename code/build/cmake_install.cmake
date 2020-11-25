@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/cmake_install.cmake")
   include("/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/cmake_install.cmake")
+  include("/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array/cmake_install.cmake")
 
 endif()
 

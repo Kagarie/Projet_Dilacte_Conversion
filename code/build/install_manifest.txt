@@ -1,8 +1,8 @@
-/usr/local/lib/dilacte/libchiffreEnLettre.so.0.0.1
-/usr/local/lib/dilacte/libchiffreEnLettre.so.1
-/usr/local/lib/dilacte/libchiffreEnLettre.so
+/usr/local/lib/libchiffreEnLettre.so
 /usr/local/include/dilacte/chiffreEnLettre.h
-/usr/local/lib/dilacte/libutils.so.0.0.1
-/usr/local/lib/dilacte/libutils.so.1
-/usr/local/lib/dilacte/libutils.so
+/usr/local/share/pkgconfig/chiffreEnLettre.pc
+/usr/local/cmake/ChiffreEnLettreConfig.cmake
+/usr/local/lib/libutils.so
 /usr/local/include/dilacte/utils.h
+/usr/local/share/pkgconfig/utils.pc
+/usr/local/cmake/UtilsConfig.cmake

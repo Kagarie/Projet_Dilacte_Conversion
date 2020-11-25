@@ -98,7 +98,7 @@ test__creat_EXTERNAL_OBJECTS =
 
 chiffreEnLettre/test-creat: chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.o
 chiffreEnLettre/test-creat: chiffreEnLettre/CMakeFiles/test-creat.dir/build.make
-chiffreEnLettre/test-creat: chiffreEnLettre/libchiffreEnLettre.so.0.0.1
+chiffreEnLettre/test-creat: chiffreEnLettre/libchiffreEnLettre.so
 chiffreEnLettre/test-creat: chiffreEnLettre/CMakeFiles/test-creat.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test-creat"
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-creat.dir/link.txt --verbose=$(VERBOSE)

@@ -74,20 +74,41 @@ CMAKE_BINARY_DIR = /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
 # The main recursive "all" target.
 all: chiffreEnLettre/all
 all: utils/all
+all: array/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: chiffreEnLettre/preinstall
 preinstall: utils/preinstall
+preinstall: array/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: chiffreEnLettre/clean
 clean: utils/clean
+clean: array/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory array
+
+# Recursive "all" directory target.
+array/all: array/CMakeFiles/array.dir/all
+
+.PHONY : array/all
+
+# Recursive "preinstall" directory target.
+array/preinstall:
+
+.PHONY : array/preinstall
+
+# Recursive "clean" directory target.
+array/clean: array/CMakeFiles/array.dir/clean
+
+.PHONY : array/clean
 
 #=============================================================================
 # Directory level rules for directory chiffreEnLettre
@@ -140,7 +161,7 @@ utils/clean: utils/CMakeFiles/utils.dir/clean
 chiffreEnLettre/CMakeFiles/test-get.dir/all: chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/all
 	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/depend
 	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=5,6 "Built target test-get"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=7,8 "Built target test-get"
 .PHONY : chiffreEnLettre/CMakeFiles/test-get.dir/all
 
 # Build rule for subdir invocation for target.
@@ -167,7 +188,7 @@ chiffreEnLettre/CMakeFiles/test-get.dir/clean:
 chiffreEnLettre/CMakeFiles/test-creat.dir/all: chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/all
 	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/depend
 	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=3,4 "Built target test-creat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=5,6 "Built target test-creat"
 .PHONY : chiffreEnLettre/CMakeFiles/test-creat.dir/all
 
 # Build rule for subdir invocation for target.
@@ -194,7 +215,7 @@ chiffreEnLettre/CMakeFiles/test-creat.dir/clean:
 chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/all:
 	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/depend
 	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=1,2 "Built target chiffreEnLettre"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=3,4 "Built target chiffreEnLettre"
 .PHONY : chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/all
 
 # Build rule for subdir invocation for target.
@@ -221,7 +242,7 @@ chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/clean:
 utils/CMakeFiles/test-mystrcmp.dir/all: utils/CMakeFiles/utils.dir/all
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-mystrcmp.dir/build.make utils/CMakeFiles/test-mystrcmp.dir/depend
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-mystrcmp.dir/build.make utils/CMakeFiles/test-mystrcmp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=9,10 "Built target test-mystrcmp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=11,12 "Built target test-mystrcmp"
 .PHONY : utils/CMakeFiles/test-mystrcmp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -248,7 +269,7 @@ utils/CMakeFiles/test-mystrcmp.dir/clean:
 utils/CMakeFiles/test-my_strcat.dir/all: utils/CMakeFiles/utils.dir/all
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-my_strcat.dir/build.make utils/CMakeFiles/test-my_strcat.dir/depend
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-my_strcat.dir/build.make utils/CMakeFiles/test-my_strcat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=7,8 "Built target test-my_strcat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=9,10 "Built target test-my_strcat"
 .PHONY : utils/CMakeFiles/test-my_strcat.dir/all
 
 # Build rule for subdir invocation for target.
@@ -275,7 +296,7 @@ utils/CMakeFiles/test-my_strcat.dir/clean:
 utils/CMakeFiles/utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=11,12 "Built target utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=13,14 "Built target utils"
 .PHONY : utils/CMakeFiles/utils.dir/all
 
 # Build rule for subdir invocation for target.
@@ -294,6 +315,33 @@ utils: utils/CMakeFiles/utils.dir/rule
 utils/CMakeFiles/utils.dir/clean:
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/clean
 .PHONY : utils/CMakeFiles/utils.dir/clean
+
+#=============================================================================
+# Target rules for target array/CMakeFiles/array.dir
+
+# All Build rule for target.
+array/CMakeFiles/array.dir/all:
+	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/array.dir/build.make array/CMakeFiles/array.dir/depend
+	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/array.dir/build.make array/CMakeFiles/array.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=1,2 "Built target array"
+.PHONY : array/CMakeFiles/array.dir/all
+
+# Build rule for subdir invocation for target.
+array/CMakeFiles/array.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array/CMakeFiles/array.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles 0
+.PHONY : array/CMakeFiles/array.dir/rule
+
+# Convenience name for target.
+array: array/CMakeFiles/array.dir/rule
+
+.PHONY : array
+
+# clean rule for target.
+array/CMakeFiles/array.dir/clean:
+	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/array.dir/build.make array/CMakeFiles/array.dir/clean
+.PHONY : array/CMakeFiles/array.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,libutils.so.1 -o libutils.so.0.0.1 CMakeFiles/utils.dir/utils.c.o   -L/usr/local/lib/dilacte  -Wl,-rpath,:::::::::::::::::::::: 
+/usr/bin/cc -fPIC -shared -Wl,-soname,libutils.so -o libutils.so CMakeFiles/utils.dir/utils.c.o   -L/usr/local/lib/dilacte  -Wl,-rpath,:::::::::::::::::::::: 
