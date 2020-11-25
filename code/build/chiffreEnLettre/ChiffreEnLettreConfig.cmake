@@ -25,7 +25,7 @@ endmacro()
 ####################################################################################
 
 set_and_check(CHIFFREENLETTRE_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
-set_and_check(CHIFFREENLETTRE_LIB_DIRS "${PACKAGE_PREFIX_DIR}/lib")
+set_and_check(CHIFFREENLETTRE_LIB_DIRS "${PACKAGE_PREFIX_DIR}/lib/${CMAKE_BUILD_TYPE}")
 set(CHIFFREENLETTRE_LIBRARIES ChiffreEnLettre)
 
 check_required_components(ChiffreEnLettre)
