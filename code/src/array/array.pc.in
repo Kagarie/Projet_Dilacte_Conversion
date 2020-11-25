@@ -1,9 +1,14 @@
 prefix=@CMAKE_INSTALL_PREFIX@
-exec_prefix=@CMAKE_INSTALL_PREFIX@
-libdir=${exec_prefix}/@CMAKE_INSTALL_LIBDIR@
-includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
-Name: @PROJECT_NAME@
-Description: @PROJECT_DESCRIPTION@
+bindir=${prefix}/bin/@CMAKE_BUILD_TYPE@
+staticlibdir=${prefix}/lib/@CMAKE_BUILD_TYPE@
+sharedlibdir=${prefix}/lib/@CMAKE_BUILD_TYPE@
+includedir=${prefix}/include
+
 Version: @PROJECT_VERSION@
-Requires: 3.0
-Libs: -L${libdir} -lmylib Cflags: -I${includedir}
+
+Name: array
+Description: Array library
+
+Requires:
+Libs: -L${bindir} -L${staticlibdir} -L${sharedlibdir} -lfraction
+Cflags: -I${includedir}

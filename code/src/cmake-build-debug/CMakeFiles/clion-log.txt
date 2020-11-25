@@ -1,0 +1,11 @@
+/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src
+CMake Error at /usr/local/cmake/ChiffreEnLettreConfig.cmake:11 (message):
+  File or directory /usr/local/lib/Debug referenced by variable
+  CHIFFREENLETTRE_LIB_DIRS does not exist !
+Call Stack (most recent call first):
+  /usr/local/cmake/ChiffreEnLettreConfig.cmake:28 (set_and_check)
+  array/CMakeLists.txt:4 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/CMakeFiles/CMakeOutput.log".

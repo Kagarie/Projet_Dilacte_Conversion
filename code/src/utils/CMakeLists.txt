@@ -1,7 +1,42 @@
-include(GNUInstallDirs)
+project(Utils C)
 add_library(utils SHARED utils.c utils.h)
-set_target_properties(utils PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
 configure_file(utils.pc.in  utils.pc @ONLY)
+
+install(
+        TARGETS utils
+        LIBRARY DESTINATION lib/${CMAKE_BUILD_TYPE}
+        ARCHIVE DESTINATION lib/${CMAKE_BUILD_TYPE}
+        RUNTIME DESTINATION bin/${CMAKE_BUILD_TYPE}
+)
+
+install(
+        FILES utils.h
+        DESTINATION include/dilacte
+)
+
+configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/utils.pc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/utils.pc
+        @ONLY
+)
+install(
+        FILES ${CMAKE_CURRENT_BINARY_DIR}/utils.pc
+        DESTINATION share/pkgconfig/${CMAKE_BUILD_TYPE}
+        COMPONENT "PkgConfig"
+)
+
+
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/UtilsConfig.cmake.in
+        ${CMAKE_CURRENT_BINARY_DIR}/UtilsConfig.cmake
+        INSTALL_DESTINATION cmake
+)
+install(
+        FILES ${CMAKE_CURRENT_BINARY_DIR}/UtilsConfig.cmake
+        DESTINATION cmake
+)
+
 
 enable_testing()
 
@@ -35,15 +70,5 @@ foreach (FILENAME ${FILES})
     endif ()
 endforeach ()
 
-install(
-        TARGETS utils
-        LIBRARY DESTINATION lib/dilacte
-        #ARCHIVE DESTINATION lib/dilacte
-        #RUNTIME DESTINATION bin/dilacte
-)
 
-install(
-        FILES utils.h
-        DESTINATION include/dilacte
-)
 

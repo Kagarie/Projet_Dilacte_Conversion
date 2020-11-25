@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ChiffreEnLettre"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\chiffreEnLettre\;CMake Files\utils\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test-get">
+				<Option output="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/test-get" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/dilacte"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 test-get"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test-get/fast">
+				<Option output="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/test-get" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/dilacte"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 test-get/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test-creat">
+				<Option output="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/test-creat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/dilacte"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 test-creat"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test-creat/fast">
+				<Option output="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/test-creat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/dilacte"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 test-creat/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chiffreEnLettre">
+				<Option output="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/libchiffreEnLettre.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/dilacte"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 chiffreEnLettre"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chiffreEnLettre/fast">
+				<Option output="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/libchiffreEnLettre.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/dilacte"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 chiffreEnLettre/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/chiffreEnLettre/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.c">
+			<Option target="chiffreEnLettre"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.h">
+			<Option target="test-get"/>
+			<Option target="test-creat"/>
+			<Option target="chiffreEnLettre"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.inc">
+			<Option target="chiffreEnLettre"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/test-creat.c">
+			<Option target="test-creat"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/test-get.c">
+			<Option target="test-get"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\chiffreEnLettre\"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/ChiffreEnLettreConfig.cmake.in">
+			<Option virtualFolder="CMake Files\chiffreEnLettre\"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.pc.in">
+			<Option virtualFolder="CMake Files\chiffreEnLettre\"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/UtilsConfig.cmake.in">
+			<Option virtualFolder="CMake Files\utils\"/>
+		</Unit>
+		<Unit filename="/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/utils.pc.in">
+			<Option virtualFolder="CMake Files\utils\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

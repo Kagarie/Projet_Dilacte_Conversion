@@ -1,10 +1,42 @@
-include(GNUInstallDirs)
-configure_file(array.pc.in array.pc @ONLY)
+project(Array C)
+
+# Recherche du projet cmake Arithmetic
+find_package(ChiffreEnLettre)
+include_directories(${CHIFFREENLETTRE_INCLUDE_DIRS})
+link_directories(${CHIFFREENLETTRE_LIB_DIRS})
 
 add_library(array SHARED array.c array.h array.inc)
-set_target_properties(array PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
-link_directories(/usr/local/lib/dilacte/)
-target_link_libraries(array libchiffreEnLettre.so)
+target_link_libraries(array ${CHIFFREENLETTRE_LIB})
+
+install(
+        TARGETS array
+        LIBRARY DESTINATION lib/${CMAKE_BUILD_TYPE}
+        ARCHIVE DESTINATION lib/${CMAKE_BUILD_TYPE}
+        RUNTIME DESTINATION bin/${CMAKE_BUILD_TYPE}
+)
+
+install(
+        FILES array.h
+        DESTINATION include/dilacte/
+)
+
+configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/array.pc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/array.pc
+        @ONLY
+)
+
+# Ajout d'un fichier de configuration de type cmake
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/ArrayConfig.cmake.in
+        ${CMAKE_CURRENT_BINARY_DIR}/ArrayConfig.cmake
+        INSTALL_DESTINATION cmake
+)
+install(
+        FILES ${CMAKE_CURRENT_BINARY_DIR}/ArrayConfig.cmake
+        DESTINATION cmake
+)
 
 enable_testing()
 
@@ -38,14 +70,3 @@ foreach (FILENAME ${FILES})
     endif ()
 endforeach ()
 
-install(
-        TARGETS array
-        LIBRARY DESTINATION lib/dilacte
-        #ARCHIVE DESTINATION lib/dilacte
-        #RUNTIME DESTINATION bin/dilacte
-)
-
-install(
-        FILES array.h
-        DESTINATION include/dilacte/
-)

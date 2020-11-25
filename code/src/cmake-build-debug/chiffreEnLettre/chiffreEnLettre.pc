@@ -1,10 +1,10 @@
-prefix=@CMAKE_INSTALL_PREFIX@
-bindir=${prefix}/bin/@CMAKE_BUILD_TYPE@
-staticlibdir=${prefix}/lib/@CMAKE_BUILD_TYPE@
-sharedlibdir=${prefix}/lib/@CMAKE_BUILD_TYPE@
+prefix=/usr/local
+bindir=${prefix}/bin/Debug
+staticlibdir=${prefix}/lib/Debug
+sharedlibdir=${prefix}/lib/Debug
 includedir=${prefix}/include
 
-Version: @PROJECT_VERSION@
+Version: 
 
 Name: chiffreEnLettre
 Description: ChiffreEnLettre library

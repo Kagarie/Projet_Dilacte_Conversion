@@ -1,11 +1,41 @@
-# on créait une varaible SRCS qui contient les feuilles chiffreEnLettre.insc/.h/.c
-set(SRCS chiffreEnLettre.c)
-set(HEADERS chiffreEnLettre.h)
-set(INCS chiffreEnLettre.inc)
-add_library(chiffreEnLettre SHARED  ${SRCS} ${HEADERS} ${INCS})
+project(ChiffreEnLettre C)
 
-configure_file(chiffreEnLettre.pc.in chiffreEnLettre.pc @ONLY)
-set_target_properties(chiffreEnLettre PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 1 PUBLIC_HEADER chiffreEnLettre.h)
+add_library(chiffreEnLettre SHARED chiffreEnLettre.h chiffreEnLettre.inc chiffreEnLettre.c)
+
+install(
+        TARGETS chiffreEnLettre
+        LIBRARY DESTINATION lib/${CMAKE_BUILD_TYPE}
+        ARCHIVE DESTINATION lib/${CMAKE_BUILD_TYPE}
+        RUNTIME DESTINATION bin/${CMAKE_BUILD_TYPE}
+)
+
+install(
+        FILES chiffreEnLettre.h
+        DESTINATION include/dilacte/
+)
+
+configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/chiffreEnLettre.pc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/chiffreEnLettre.pc
+        @ONLY
+)
+install(
+        FILES ${CMAKE_CURRENT_BINARY_DIR}/chiffreEnLettre.pc
+        DESTINATION share/pkgconfig/${CMAKE_BUILD_TYPE}
+        COMPONENT "PkgConfig"
+)
+
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/ChiffreEnLettreConfig.cmake.in
+        ${CMAKE_CURRENT_BINARY_DIR}/ChiffreEnLettreConfig.cmake
+        INSTALL_DESTINATION cmake
+)
+install(
+        FILES ${CMAKE_CURRENT_BINARY_DIR}/ChiffreEnLettreConfig.cmake
+        DESTINATION cmake
+)
+
 enable_testing()
 
 find_program(VALGRIND "valgrind")
@@ -38,14 +68,3 @@ foreach (FILENAME ${FILES})
     endif ()
 endforeach ()
 
-install(
-        TARGETS chiffreEnLettre
-        LIBRARY DESTINATION lib/dilacte
-        ARCHIVE DESTINATION lib/dilacte
-        RUNTIME DESTINATION bin/dilacte
-)
-
-install(
-        FILES chiffreEnLettre.h
-        DESTINATION include/dilacte/
-)
