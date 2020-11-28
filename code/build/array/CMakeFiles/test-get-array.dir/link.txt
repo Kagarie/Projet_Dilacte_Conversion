@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/test-get-array.dir/test-get-array.c.o -o test-get-array  -Wl,-rpath,/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array:/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre libarray.so ../chiffreEnLettre/libchiffreEnLettre.so 

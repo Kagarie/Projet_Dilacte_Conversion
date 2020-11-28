@@ -1,8 +1,0 @@
-/usr/local/lib/libchiffreEnLettre.so
-/usr/local/include/dilacte/chiffreEnLettre.h
-/usr/local/share/pkgconfig/chiffreEnLettre.pc
-/usr/local/cmake/ChiffreEnLettreConfig.cmake
-/usr/local/lib/libutils.so
-/usr/local/include/dilacte/utils.h
-/usr/local/share/pkgconfig/utils.pc
-/usr/local/cmake/UtilsConfig.cmake

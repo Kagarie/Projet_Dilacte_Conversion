@@ -1,12 +1,11 @@
 project(Array C)
 
 # Recherche du projet cmake Arithmetic
-find_package(ChiffreEnLettre)
-include_directories(${CHIFFREENLETTRE_INCLUDE_DIRS})
-link_directories(${CHIFFREENLETTRE_LIB_DIRS})
+include_directories(${CMAKE_SOURCE_DIR}/chiffreEnLettre)
 
 add_library(array SHARED array.c array.h array.inc)
-target_link_libraries(array ${CHIFFREENLETTRE_LIB})
+target_link_libraries(array chiffreEnLettre)
+add_dependencies(array chiffreEnLettre)
 
 install(
         TARGETS array

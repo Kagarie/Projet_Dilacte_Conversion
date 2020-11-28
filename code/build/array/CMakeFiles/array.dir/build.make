@@ -98,6 +98,7 @@ array_EXTERNAL_OBJECTS =
 
 array/libarray.so: array/CMakeFiles/array.dir/array.c.o
 array/libarray.so: array/CMakeFiles/array.dir/build.make
+array/libarray.so: chiffreEnLettre/libchiffreEnLettre.so
 array/libarray.so: array/CMakeFiles/array.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library libarray.so"
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/array.dir/link.txt --verbose=$(VERBOSE)

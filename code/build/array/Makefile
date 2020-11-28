@@ -135,7 +135,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -174,6 +174,51 @@ preinstall/fast:
 depend:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+array/CMakeFiles/test-creat-array.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array/CMakeFiles/test-creat-array.dir/rule
+.PHONY : array/CMakeFiles/test-creat-array.dir/rule
+
+# Convenience name for target.
+test-creat-array: array/CMakeFiles/test-creat-array.dir/rule
+
+.PHONY : test-creat-array
+
+# fast build rule for target.
+test-creat-array/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-creat-array.dir/build.make array/CMakeFiles/test-creat-array.dir/build
+.PHONY : test-creat-array/fast
+
+# Convenience name for target.
+array/CMakeFiles/test-affiche-array.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array/CMakeFiles/test-affiche-array.dir/rule
+.PHONY : array/CMakeFiles/test-affiche-array.dir/rule
+
+# Convenience name for target.
+test-affiche-array: array/CMakeFiles/test-affiche-array.dir/rule
+
+.PHONY : test-affiche-array
+
+# fast build rule for target.
+test-affiche-array/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-affiche-array.dir/build.make array/CMakeFiles/test-affiche-array.dir/build
+.PHONY : test-affiche-array/fast
+
+# Convenience name for target.
+array/CMakeFiles/test-get-array.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array/CMakeFiles/test-get-array.dir/rule
+.PHONY : array/CMakeFiles/test-get-array.dir/rule
+
+# Convenience name for target.
+test-get-array: array/CMakeFiles/test-get-array.dir/rule
+
+.PHONY : test-get-array
+
+# fast build rule for target.
+test-get-array/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/build
+.PHONY : test-get-array/fast
 
 # Convenience name for target.
 array/CMakeFiles/array.dir/rule:
@@ -217,6 +262,87 @@ array.c.s:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/array.dir/build.make array/CMakeFiles/array.dir/array.c.s
 .PHONY : array.c.s
 
+test-affiche-array.o: test-affiche-array.c.o
+
+.PHONY : test-affiche-array.o
+
+# target to build an object file
+test-affiche-array.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-affiche-array.dir/build.make array/CMakeFiles/test-affiche-array.dir/test-affiche-array.c.o
+.PHONY : test-affiche-array.c.o
+
+test-affiche-array.i: test-affiche-array.c.i
+
+.PHONY : test-affiche-array.i
+
+# target to preprocess a source file
+test-affiche-array.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-affiche-array.dir/build.make array/CMakeFiles/test-affiche-array.dir/test-affiche-array.c.i
+.PHONY : test-affiche-array.c.i
+
+test-affiche-array.s: test-affiche-array.c.s
+
+.PHONY : test-affiche-array.s
+
+# target to generate assembly for a file
+test-affiche-array.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-affiche-array.dir/build.make array/CMakeFiles/test-affiche-array.dir/test-affiche-array.c.s
+.PHONY : test-affiche-array.c.s
+
+test-creat-array.o: test-creat-array.c.o
+
+.PHONY : test-creat-array.o
+
+# target to build an object file
+test-creat-array.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-creat-array.dir/build.make array/CMakeFiles/test-creat-array.dir/test-creat-array.c.o
+.PHONY : test-creat-array.c.o
+
+test-creat-array.i: test-creat-array.c.i
+
+.PHONY : test-creat-array.i
+
+# target to preprocess a source file
+test-creat-array.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-creat-array.dir/build.make array/CMakeFiles/test-creat-array.dir/test-creat-array.c.i
+.PHONY : test-creat-array.c.i
+
+test-creat-array.s: test-creat-array.c.s
+
+.PHONY : test-creat-array.s
+
+# target to generate assembly for a file
+test-creat-array.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-creat-array.dir/build.make array/CMakeFiles/test-creat-array.dir/test-creat-array.c.s
+.PHONY : test-creat-array.c.s
+
+test-get-array.o: test-get-array.c.o
+
+.PHONY : test-get-array.o
+
+# target to build an object file
+test-get-array.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/test-get-array.c.o
+.PHONY : test-get-array.c.o
+
+test-get-array.i: test-get-array.c.i
+
+.PHONY : test-get-array.i
+
+# target to preprocess a source file
+test-get-array.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/test-get-array.c.i
+.PHONY : test-get-array.c.i
+
+test-get-array.s: test-get-array.c.s
+
+.PHONY : test-get-array.s
+
+# target to generate assembly for a file
+test-get-array.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/test-get-array.c.s
+.PHONY : test-get-array.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -230,9 +356,21 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... array"
+	@echo "... test-affiche-array"
+	@echo "... test-creat-array"
+	@echo "... test-get-array"
 	@echo "... array.o"
 	@echo "... array.i"
 	@echo "... array.s"
+	@echo "... test-affiche-array.o"
+	@echo "... test-affiche-array.i"
+	@echo "... test-affiche-array.s"
+	@echo "... test-creat-array.o"
+	@echo "... test-creat-array.i"
+	@echo "... test-creat-array.s"
+	@echo "... test-get-array.o"
+	@echo "... test-get-array.i"
+	@echo "... test-get-array.s"
 .PHONY : help
 
 

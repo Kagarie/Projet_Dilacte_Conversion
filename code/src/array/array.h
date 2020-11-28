@@ -3,22 +3,19 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <chiffreEnLettre.h>
 
 typedef struct _Array Array;
 
-extern Array *array_create(const unsigned int index, const unsigned int nombre, char *mot);
+extern Array *array_initialisation();
 
-extern void array_destroy(Array *array);
+//extern void array_destroy(Array *array);
 
-//On retourne l'index
-extern unsigned int array_get_index(const Array *array);
 
-//On retourne le nombre de la sous-structure
-extern unsigned int array_get_nombre(const Array *array);
+//On ajoute un élément
+extern void *array_insertion(Array *array, int nombre, char *mot);
 
-//On retourne le mot de la sous-structure
-extern char *array_get_mot(const Array *array);
-
+//On affiche l'array
 extern void *array_affiche(const Array *array);
 
 #endif //ARRAY_H_

@@ -75,6 +75,18 @@ CMAKE_BINARY_DIR = /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -120,22 +132,10 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -176,34 +176,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-chiffreEnLettre/CMakeFiles/test-get.dir/rule:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chiffreEnLettre/CMakeFiles/test-get.dir/rule
-.PHONY : chiffreEnLettre/CMakeFiles/test-get.dir/rule
+chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/rule
+.PHONY : chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/rule
 
 # Convenience name for target.
-test-get: chiffreEnLettre/CMakeFiles/test-get.dir/rule
+test-get-ChiffreEnLettre: chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/rule
 
-.PHONY : test-get
+.PHONY : test-get-ChiffreEnLettre
 
 # fast build rule for target.
-test-get/fast:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/build
-.PHONY : test-get/fast
+test-get-ChiffreEnLettre/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build
+.PHONY : test-get-ChiffreEnLettre/fast
 
 # Convenience name for target.
-chiffreEnLettre/CMakeFiles/test-creat.dir/rule:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chiffreEnLettre/CMakeFiles/test-creat.dir/rule
-.PHONY : chiffreEnLettre/CMakeFiles/test-creat.dir/rule
+chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/rule:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/rule
+.PHONY : chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/rule
 
 # Convenience name for target.
-test-creat: chiffreEnLettre/CMakeFiles/test-creat.dir/rule
+test-creat-ChiffreEnLettre: chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/rule
 
-.PHONY : test-creat
+.PHONY : test-creat-ChiffreEnLettre
 
 # fast build rule for target.
-test-creat/fast:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/build
-.PHONY : test-creat/fast
+test-creat-ChiffreEnLettre/fast:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build
+.PHONY : test-creat-ChiffreEnLettre/fast
 
 # Convenience name for target.
 chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/rule:
@@ -247,59 +247,59 @@ chiffreEnLettre.c.s:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.s
 .PHONY : chiffreEnLettre.c.s
 
-test-creat.o: test-creat.c.o
+test-creat-ChiffreEnLettre.o: test-creat-ChiffreEnLettre.c.o
 
-.PHONY : test-creat.o
-
-# target to build an object file
-test-creat.c.o:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.o
-.PHONY : test-creat.c.o
-
-test-creat.i: test-creat.c.i
-
-.PHONY : test-creat.i
-
-# target to preprocess a source file
-test-creat.c.i:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.i
-.PHONY : test-creat.c.i
-
-test-creat.s: test-creat.c.s
-
-.PHONY : test-creat.s
-
-# target to generate assembly for a file
-test-creat.c.s:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/test-creat.c.s
-.PHONY : test-creat.c.s
-
-test-get.o: test-get.c.o
-
-.PHONY : test-get.o
+.PHONY : test-creat-ChiffreEnLettre.o
 
 # target to build an object file
-test-get.c.o:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.o
-.PHONY : test-get.c.o
+test-creat-ChiffreEnLettre.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/test-creat-ChiffreEnLettre.c.o
+.PHONY : test-creat-ChiffreEnLettre.c.o
 
-test-get.i: test-get.c.i
+test-creat-ChiffreEnLettre.i: test-creat-ChiffreEnLettre.c.i
 
-.PHONY : test-get.i
+.PHONY : test-creat-ChiffreEnLettre.i
 
 # target to preprocess a source file
-test-get.c.i:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.i
-.PHONY : test-get.c.i
+test-creat-ChiffreEnLettre.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/test-creat-ChiffreEnLettre.c.i
+.PHONY : test-creat-ChiffreEnLettre.c.i
 
-test-get.s: test-get.c.s
+test-creat-ChiffreEnLettre.s: test-creat-ChiffreEnLettre.c.s
 
-.PHONY : test-get.s
+.PHONY : test-creat-ChiffreEnLettre.s
 
 # target to generate assembly for a file
-test-get.c.s:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/test-get.c.s
-.PHONY : test-get.c.s
+test-creat-ChiffreEnLettre.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/test-creat-ChiffreEnLettre.c.s
+.PHONY : test-creat-ChiffreEnLettre.c.s
+
+test-get-ChiffreEnLettre.o: test-get-ChiffreEnLettre.c.o
+
+.PHONY : test-get-ChiffreEnLettre.o
+
+# target to build an object file
+test-get-ChiffreEnLettre.c.o:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/test-get-ChiffreEnLettre.c.o
+.PHONY : test-get-ChiffreEnLettre.c.o
+
+test-get-ChiffreEnLettre.i: test-get-ChiffreEnLettre.c.i
+
+.PHONY : test-get-ChiffreEnLettre.i
+
+# target to preprocess a source file
+test-get-ChiffreEnLettre.c.i:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/test-get-ChiffreEnLettre.c.i
+.PHONY : test-get-ChiffreEnLettre.c.i
+
+test-get-ChiffreEnLettre.s: test-get-ChiffreEnLettre.c.s
+
+.PHONY : test-get-ChiffreEnLettre.s
+
+# target to generate assembly for a file
+test-get-ChiffreEnLettre.c.s:
+	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/test-get-ChiffreEnLettre.c.s
+.PHONY : test-get-ChiffreEnLettre.c.s
 
 # Help Target
 help:
@@ -314,17 +314,17 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... chiffreEnLettre"
-	@echo "... test-creat"
-	@echo "... test-get"
+	@echo "... test-creat-ChiffreEnLettre"
+	@echo "... test-get-ChiffreEnLettre"
 	@echo "... chiffreEnLettre.o"
 	@echo "... chiffreEnLettre.i"
 	@echo "... chiffreEnLettre.s"
-	@echo "... test-creat.o"
-	@echo "... test-creat.i"
-	@echo "... test-creat.s"
-	@echo "... test-get.o"
-	@echo "... test-get.i"
-	@echo "... test-get.s"
+	@echo "... test-creat-ChiffreEnLettre.o"
+	@echo "... test-creat-ChiffreEnLettre.i"
+	@echo "... test-creat-ChiffreEnLettre.s"
+	@echo "... test-get-ChiffreEnLettre.o"
+	@echo "... test-get-ChiffreEnLettre.i"
+	@echo "... test-get-ChiffreEnLettre.s"
 .PHONY : help
 
 

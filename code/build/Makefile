@@ -135,7 +135,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -176,30 +176,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test-get
+# Target rules for targets named test-get-ChiffreEnLettre
 
 # Build rule for target.
-test-get: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-get
-.PHONY : test-get
+test-get-ChiffreEnLettre: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-get-ChiffreEnLettre
+.PHONY : test-get-ChiffreEnLettre
 
 # fast build rule for target.
-test-get/fast:
-	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get.dir/build.make chiffreEnLettre/CMakeFiles/test-get.dir/build
-.PHONY : test-get/fast
+test-get-ChiffreEnLettre/fast:
+	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build
+.PHONY : test-get-ChiffreEnLettre/fast
 
 #=============================================================================
-# Target rules for targets named test-creat
+# Target rules for targets named test-creat-ChiffreEnLettre
 
 # Build rule for target.
-test-creat: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-creat
-.PHONY : test-creat
+test-creat-ChiffreEnLettre: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-creat-ChiffreEnLettre
+.PHONY : test-creat-ChiffreEnLettre
 
 # fast build rule for target.
-test-creat/fast:
-	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat.dir/build.make chiffreEnLettre/CMakeFiles/test-creat.dir/build
-.PHONY : test-creat/fast
+test-creat-ChiffreEnLettre/fast:
+	$(MAKE) $(MAKESILENT) -f chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build.make chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build
+.PHONY : test-creat-ChiffreEnLettre/fast
 
 #=============================================================================
 # Target rules for targets named chiffreEnLettre
@@ -254,6 +254,45 @@ utils/fast:
 .PHONY : utils/fast
 
 #=============================================================================
+# Target rules for targets named test-creat-array
+
+# Build rule for target.
+test-creat-array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-creat-array
+.PHONY : test-creat-array
+
+# fast build rule for target.
+test-creat-array/fast:
+	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-creat-array.dir/build.make array/CMakeFiles/test-creat-array.dir/build
+.PHONY : test-creat-array/fast
+
+#=============================================================================
+# Target rules for targets named test-affiche-array
+
+# Build rule for target.
+test-affiche-array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-affiche-array
+.PHONY : test-affiche-array
+
+# fast build rule for target.
+test-affiche-array/fast:
+	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-affiche-array.dir/build.make array/CMakeFiles/test-affiche-array.dir/build
+.PHONY : test-affiche-array/fast
+
+#=============================================================================
+# Target rules for targets named test-get-array
+
+# Build rule for target.
+test-get-array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-get-array
+.PHONY : test-get-array
+
+# fast build rule for target.
+test-get-array/fast:
+	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/build
+.PHONY : test-get-array/fast
+
+#=============================================================================
 # Target rules for targets named array
 
 # Build rule for target.
@@ -280,8 +319,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... array"
 	@echo "... chiffreEnLettre"
-	@echo "... test-creat"
-	@echo "... test-get"
+	@echo "... test-affiche-array"
+	@echo "... test-creat-ChiffreEnLettre"
+	@echo "... test-creat-array"
+	@echo "... test-get-ChiffreEnLettre"
+	@echo "... test-get-array"
 	@echo "... test-my_strcat"
 	@echo "... test-mystrcmp"
 	@echo "... utils"

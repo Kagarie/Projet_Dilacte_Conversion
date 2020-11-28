@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -Darray_EXPORTS
 
-C_INCLUDES = -I/usr/local/lib/dilacte
+C_INCLUDES = -I/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre
 
 C_FLAGS = -fPIC
 

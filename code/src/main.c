@@ -13,7 +13,6 @@ void static usage() {
     puts("La librairy s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
     puts("-d -dialecte pour voir les dialecte disponible");
-    exit(EXIT_SUCCESS);
 }
 
 //a faire
@@ -116,10 +115,15 @@ void yaml(const char *dialecte) {
 
 int main(int argc, char *argv[]) {
 
+    if(argc != 3){
+        usage();
+        exit(EXIT_FAILURE;)
+    }
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre
     if (argc == 1 || mystrcmp(argv[1], "-c") == 0 || mystrcmp(argv[1], "-commande") == 0) {
         usage();
+        exit(EXIT_SUCCESS)
     }
     if (mystrcmp(argv[1], "-d") == 0 || mystrcmp(argv[1], "-dialecte") == 0) {
         // affichageDesDilacteDiponible();

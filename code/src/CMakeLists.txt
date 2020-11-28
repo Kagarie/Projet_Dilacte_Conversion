@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.0)
 project(Convertisseur VERSION 0.0.1 DESCRIPTION "ChiffreEnLettre ma library projet de C")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH true)
 
-include_directories(/usr/local/lib/dilacte)
-link_directories(/usr/local/lib/dilacte)
 
 
 add_subdirectory(chiffreEnLettre)

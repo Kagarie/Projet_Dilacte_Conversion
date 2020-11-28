@@ -15,11 +15,12 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/usr/local/lib/dilacte"
+  "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

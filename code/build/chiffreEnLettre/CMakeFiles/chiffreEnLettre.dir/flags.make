@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DchiffreEnLettre_EXPORTS
 
-C_INCLUDES = -I/usr/local/lib/dilacte
+C_INCLUDES = 
 
 C_FLAGS = -fPIC
 

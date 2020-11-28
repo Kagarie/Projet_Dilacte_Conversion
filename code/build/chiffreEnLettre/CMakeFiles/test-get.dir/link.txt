@@ -1,1 +1,0 @@
-/usr/bin/cc -rdynamic CMakeFiles/test-get.dir/test-get.c.o -o test-get   -L/usr/local/lib/dilacte  -Wl,-rpath,/usr/local/lib/dilacte:/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre libchiffreEnLettre.so 
