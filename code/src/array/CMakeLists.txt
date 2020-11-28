@@ -1,6 +1,5 @@
 project(Array C)
 
-# Recherche du projet cmake Arithmetic
 include_directories(${CMAKE_SOURCE_DIR}/chiffreEnLettre)
 
 add_library(array SHARED array.c array.h array.inc)
@@ -9,9 +8,9 @@ add_dependencies(array chiffreEnLettre)
 
 install(
         TARGETS array
-        LIBRARY DESTINATION lib/${CMAKE_BUILD_TYPE}
-        ARCHIVE DESTINATION lib/${CMAKE_BUILD_TYPE}
-        RUNTIME DESTINATION bin/${CMAKE_BUILD_TYPE}
+        LIBRARY DESTINATION lib/dilacte/${CMAKE_BUILD_TYPE}
+        ARCHIVE DESTINATION lib/dilacte/${CMAKE_BUILD_TYPE}
+        RUNTIME DESTINATION bin/dilacte/${CMAKE_BUILD_TYPE}
 )
 
 install(

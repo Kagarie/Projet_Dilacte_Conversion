@@ -2,15 +2,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#include <yaml.h>
 
-#include "./array/array.h"
-#include "./utils/utils.h"
+
+#include "./main.h"
 
 
 //explication de l'utilisation de la librairy
 void static usage() {
-    puts("La librairy s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
+    puts("Le programme s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
     puts("-d -dialecte pour voir les dialecte disponible");
 }
@@ -40,17 +39,24 @@ bool static verifDialecte(char *commande) {
     return true;
 }
 
-void yaml(const char *dialecte) {
+void yaml(const char *dilacte) {
+
     //création du nom de feuille à chercher
-    char *str = (char *) calloc(20, 1);
-    my_strcat(str, dialecte);
+    char *str = (char *) calloc(25, 1);
+    my_strcat(str,"yaml/");
+    my_strcat(str, dilacte);
     my_strcat(str, ".yaml");
+    printf("fichiers = %s\n",str);
+
     //ouverture du fichier
     FILE *fh = fopen(str, "r");
+
+    printf("ok");
 
     //on vérifie si le fichier à bien était ouvert
     if (fh == NULL)
         fputs("Error  open yaml!\n", stderr);
+
 
     //initialisation du parser et token
     yaml_parser_t parser;
@@ -63,11 +69,7 @@ void yaml(const char *dialecte) {
     //on place le paser au début du fichier à lire
     yaml_parser_set_input_file(&parser, fh);
 
-    //si tout c'est bien passé on peux déclarer nos structure
-    /* struct TabChiffreLettre tabData;
-     tabData.index = 0;
-     struct ChiffreLettre chifData;
-     */
+
     //on déclare aussi une variable qui va nous servir à récupérer les données
     char *tk;
     //on boucle tout le long du fichier
@@ -87,7 +89,7 @@ void yaml(const char *dialecte) {
                 break;
                 /* Token types (read before actual token) */
             case YAML_KEY_TOKEN:
-                if (mystrcmp(tk, dialecte) == 0)
+                if (mystrcmp(tk, dilacte) == 0)
                     puts("premier élèment");
                 else {
                     //on s'occupe ensuite des éléèments qui nous interresse
@@ -115,15 +117,15 @@ void yaml(const char *dialecte) {
 
 int main(int argc, char *argv[]) {
 
-    if(argc != 3){
+    if (argc != 3) {
         usage();
-        exit(EXIT_FAILURE;)
+        exit(EXIT_FAILURE);
     }
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre
     if (argc == 1 || mystrcmp(argv[1], "-c") == 0 || mystrcmp(argv[1], "-commande") == 0) {
         usage();
-        exit(EXIT_SUCCESS)
+        exit(EXIT_SUCCESS);
     }
     if (mystrcmp(argv[1], "-d") == 0 || mystrcmp(argv[1], "-dialecte") == 0) {
         // affichageDesDilacteDiponible();
@@ -131,15 +133,18 @@ int main(int argc, char *argv[]) {
 
     //Si le paramètre n'est pas une commande on test si c'est un dialecte
     //Si ce n'est pas un dialecte et ni une commande on arrête le programme
-    if (!verifDialecte(argv[1])) {
+    /*if (!verifDialecte(argv[1])) {
         exit(EXIT_FAILURE);
-    }
+    }*/
 
     //si le second paramètre n'est pas un entier on arrête le programme
+
     if (strtol(argv[2], NULL, 0) == 0) {
         printf("entier attendu\n");
         exit(EXIT_FAILURE);
     }
+    // si le test précédent march on récupérer la valeur par précotion on la "nettoie"
+    int nombre = strtol(argv[2], NULL, 0);
     /*
         Si tous les tests précédents sont bien passé nous pouvons passer en
         phase de traitement de la demande
@@ -149,7 +154,12 @@ int main(int argc, char *argv[]) {
         Après on traite la demande si ce n'est pas présent dans le dilacte demandé on va chercher dans le tableau par défaut
     */
 
-    printf("test : ", argv[1]);
+    printf("test : %s\n", argv[1]);
+    printf("test : %d\n", nombre);
+
+    //pour commencer on initialise notre array
+    Array *arrayReference=array_initialisation();
+
     //le dilacte FR_fr nous servira de référence
     //il permet de faire une array qui contient des structures
     yaml("FR_fr");

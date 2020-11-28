@@ -11,9 +11,10 @@
 
 int main(void) {
     Array *array = array_initialisation();
+    array_insertion(array, 10, "dix");
     array_insertion(array, 15, "quinze");
     array_insertion(array, 16, "seize");
-    array_insertion(array, 10, "dix");
     array_affiche(array);
+    array_destroy(array);
     return EXIT_SUCCESS;
 }

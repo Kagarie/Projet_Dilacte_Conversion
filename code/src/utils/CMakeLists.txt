@@ -4,9 +4,9 @@ configure_file(utils.pc.in  utils.pc @ONLY)
 
 install(
         TARGETS utils
-        LIBRARY DESTINATION lib/${CMAKE_BUILD_TYPE}
-        ARCHIVE DESTINATION lib/${CMAKE_BUILD_TYPE}
-        RUNTIME DESTINATION bin/${CMAKE_BUILD_TYPE}
+        LIBRARY DESTINATION lib/dilacte/${CMAKE_BUILD_TYPE}
+        ARCHIVE DESTINATION lib/dilacte/${CMAKE_BUILD_TYPE}
+        RUNTIME DESTINATION bin/dilacte/${CMAKE_BUILD_TYPE}
 )
 
 install(

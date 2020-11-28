@@ -4,9 +4,9 @@ add_library(chiffreEnLettre SHARED chiffreEnLettre.h chiffreEnLettre.inc chiffre
 
 install(
         TARGETS chiffreEnLettre
-        LIBRARY DESTINATION lib/${CMAKE_BUILD_TYPE}
-        ARCHIVE DESTINATION lib/${CMAKE_BUILD_TYPE}
-        RUNTIME DESTINATION bin/${CMAKE_BUILD_TYPE}
+        LIBRARY DESTINATION lib/dilacte/${CMAKE_BUILD_TYPE}
+        ARCHIVE DESTINATION lib/dilacte/${CMAKE_BUILD_TYPE}
+        RUNTIME DESTINATION bin/dilacte/${CMAKE_BUILD_TYPE}
 )
 
 install(

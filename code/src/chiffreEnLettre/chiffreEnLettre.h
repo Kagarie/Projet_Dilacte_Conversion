@@ -34,7 +34,6 @@ extern void chiffreEnLettre_set_suivant(ChiffreEnLettre *ch, ChiffreEnLettre *su
 //On return le pointeur de la structure suivante
 extern ChiffreEnLettre *chiffreEnLettre_get_suivant(const ChiffreEnLettre *chiffreEnLettre);
 
-
 //Fonction pour créer notre sturcture
 extern ChiffreEnLettre *chiffreEnLettre_create_full(const int nombre, char *mot);
 

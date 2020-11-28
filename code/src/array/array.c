@@ -20,6 +20,19 @@ Array *array_initialisation() {
     return array;
 }
 
+void array_destroy(Array *array) {
+    if (array == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    ChiffreEnLettre *ch = array->premier;
+
+    while (ch != NULL) {
+        chiffreEnLettre_destroy(ch);
+        ch = chiffreEnLettre_get_suivant(ch);
+    }
+    free(array);
+}
+
 void *array_insertion(Array *array, int nombre, char *mot) {
     ChiffreEnLettre *nouveau = malloc(sizeof(chiffreEnLettre_get_taille()));
     if (array == NULL || nouveau == NULL) {
@@ -30,18 +43,18 @@ void *array_insertion(Array *array, int nombre, char *mot) {
     /* Insertion de l'élément au début de la liste */
     chiffreEnLettre_set_nombre(nouveau, nombre);
     chiffreEnLettre_set_mot(nouveau, mot);
-    chiffreEnLettre_set_suivant(array->premier, nouveau);
+    chiffreEnLettre_set_suivant(nouveau, array->premier);
+    array->premier = nouveau;
 }
 
-void *array_affiche(const Array *array) {
+void *array_affiche(Array *array) {
     if (array == NULL) {
         exit(EXIT_FAILURE);
     }
     ChiffreEnLettre *ch = array->premier;
-    while (chiffreEnLettre_get_suivant(ch)!= NULL) {
-        printf("nombre : %d et mot : %s\n", chiffreEnLettre_get_nombre(array->premier),
-               chiffreEnLettre_get_mot(array->premier));
-        ch = chiffreEnLettre_get_suivant(array->premier);
+
+    while (ch != NULL) {
+        printf("nombre : %d mot :%s\n", chiffreEnLettre_get_nombre(ch), chiffreEnLettre_get_mot(ch));
+        ch = chiffreEnLettre_get_suivant(ch);
     }
-    printf("NULL\n");
 }
