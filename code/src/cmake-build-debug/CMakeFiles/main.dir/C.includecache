@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../array/array.h
+stddef.h
+-
+stdlib.h
+-
+
+../utils/utils.h
+string.h
+-
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/main.c
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+string.h
+-
+dirent.h
+-
+./main.h
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/main.h
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/main.h
+yaml.h
+-
+array.h
+-
+utils.h
+-
+

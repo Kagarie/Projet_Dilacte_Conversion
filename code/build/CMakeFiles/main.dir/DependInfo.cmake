@@ -12,6 +12,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array"
   "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils"
+  "/lib"
   )
 
 # Targets to which this target links.

@@ -18,6 +18,9 @@ include_directories(${CMAKE_SOURCE_DIR}/utils)
 target_link_libraries(main array)
 add_dependencies(main array)
 
+
+INCLUDE_DIRECTORIES(/lib/)
+LINK_DIRECTORIES(/lib/libyaml.so)
 target_link_libraries(main libyaml.so)
 
 enable_testing()

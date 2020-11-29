@@ -10,7 +10,6 @@ extern Array *array_initialisation();
 
 extern void array_destroy(Array *array);
 
-
 //On ajoute un élément
 extern void *array_insertion(Array *array, int nombre, char *mot);
 

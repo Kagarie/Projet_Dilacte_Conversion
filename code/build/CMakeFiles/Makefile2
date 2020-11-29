@@ -144,6 +144,7 @@ chiffreEnLettre/clean: chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/clean
 # Directory level rules for directory utils
 
 # Recursive "all" directory target.
+utils/all: utils/CMakeFiles/test-tronqueChaine.dir/all
 utils/all: utils/CMakeFiles/test-mystrcmp.dir/all
 utils/all: utils/CMakeFiles/test-my_strcat.dir/all
 utils/all: utils/CMakeFiles/utils.dir/all
@@ -156,6 +157,7 @@ utils/preinstall:
 .PHONY : utils/preinstall
 
 # Recursive "clean" directory target.
+utils/clean: utils/CMakeFiles/test-tronqueChaine.dir/clean
 utils/clean: utils/CMakeFiles/test-mystrcmp.dir/clean
 utils/clean: utils/CMakeFiles/test-my_strcat.dir/clean
 utils/clean: utils/CMakeFiles/utils.dir/clean
@@ -273,6 +275,33 @@ chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/clean:
 .PHONY : chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/clean
 
 #=============================================================================
+# Target rules for target utils/CMakeFiles/test-tronqueChaine.dir
+
+# All Build rule for target.
+utils/CMakeFiles/test-tronqueChaine.dir/all: utils/CMakeFiles/utils.dir/all
+	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/depend
+	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=21,22 "Built target test-tronqueChaine"
+.PHONY : utils/CMakeFiles/test-tronqueChaine.dir/all
+
+# Build rule for subdir invocation for target.
+utils/CMakeFiles/test-tronqueChaine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/test-tronqueChaine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles 0
+.PHONY : utils/CMakeFiles/test-tronqueChaine.dir/rule
+
+# Convenience name for target.
+test-tronqueChaine: utils/CMakeFiles/test-tronqueChaine.dir/rule
+
+.PHONY : test-tronqueChaine
+
+# clean rule for target.
+utils/CMakeFiles/test-tronqueChaine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/clean
+.PHONY : utils/CMakeFiles/test-tronqueChaine.dir/clean
+
+#=============================================================================
 # Target rules for target utils/CMakeFiles/test-mystrcmp.dir
 
 # All Build rule for target.
@@ -333,7 +362,7 @@ utils/CMakeFiles/test-my_strcat.dir/clean:
 utils/CMakeFiles/utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=21,22 "Built target utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/CMakeFiles --progress-num=23,24 "Built target utils"
 .PHONY : utils/CMakeFiles/utils.dir/all
 
 # Build rule for subdir invocation for target.

@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/utils.c
+stdio.h
+-
 ./utils.h
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/utils.h
 

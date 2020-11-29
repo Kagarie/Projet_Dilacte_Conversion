@@ -21,6 +21,8 @@ stdbool.h
 -
 string.h
 -
+dirent.h
+-
 ./main.h
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/main.h
 
