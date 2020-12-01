@@ -10,8 +10,9 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array"
   "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils"
+  "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array"
+  "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre"
   "/lib"
   )
 

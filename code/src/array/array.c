@@ -33,6 +33,19 @@ void array_destroy(Array *array) {
     free(array);
 }
 
+int array_get_nombre(Array *array) {
+    return chiffreEnLettre_get_nombre(array->premier);
+}
+
+char *array_get_mot(Array *array) {
+    return chiffreEnLettre_get_mot(array->premier);
+}
+
+ChiffreEnLettre *array_get_premier(Array *array){
+    return chiffreEnLettre_get_suivant(array->premier);
+}
+
+
 void *array_insertion(Array *array, int nombre, char *mot) {
     ChiffreEnLettre *nouveau = malloc(sizeof(chiffreEnLettre_get_taille()));
     if (array == NULL || nouveau == NULL) {

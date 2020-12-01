@@ -28,7 +28,7 @@ void affichageDialecte() {
         }
         closedir(d);
     }
-    exit(EXIT_SUCCESS);
+
 }
 
 //on vérifie si le dialecte est bien présent
@@ -68,59 +68,77 @@ void yaml(Array *array, char *dilacte) {
         exit(EXIT_FAILURE);
     }
 
-    //initialisation du parser et token
     yaml_parser_t parser;
-    yaml_token_t token;
+    yaml_token_t token;   /* new variable */
 
-    //erreur si l'initialisation échoue
+    /* Initialize parser */
     if (!yaml_parser_initialize(&parser))
-        fputs("Erreur initialisation parser!\n", stderr);
+        fputs("Failed to initialize parser!\n", stderr);
+    if (fh == NULL)
+        fputs("Failed to open file!\n", stderr);
 
-    //on place le paser au début du fichier à lire
+    /* Set input file */
     yaml_parser_set_input_file(&parser, fh);
 
-    //on déclare aussi une variable qui va nous servir à récupérer les données
-    char *tk;
-    int nombre;
+
     char *mot;
-    //on boucle tout le long du fichier
+    char *nombre;
+    /* BEGIN new code */
     do {
         yaml_parser_scan(&parser, &token);
-        switch (token.type) {
+        switch (token.type) { ;
+/* Token types (read before actual token) */
+            case YAML_KEY_TOKEN:
+                printf("(Key token)  ");
+                nombre = token.data.scalar.value;
+                printf("nombre %s\n", token.data.scalar.value);
+
+                break;
+            case YAML_VALUE_TOKEN:
+                printf("(Value token) ");
+                mot = token.data.scalar.value;
+                break;
 /* Data */
             case YAML_SCALAR_TOKEN:
-                // token.data.scalar.value;
-                //printf("token %s \n", token.data.scalar.value);
-                if (atoi(token.data.scalar.value)) {
-                    nombre = atoi(token.data.scalar.value);
-                    //printf("nombre %d\n", nombre);
-                } else {
-                    mot = token.data.scalar.value;
-                    //printf("mot %s\n", mot);
+                if (token.type == YAML_KEY_TOKEN) {
+                    nombre = token.data.scalar.value;
                 }
+                if (token.type = YAML_VALUE_TOKEN) {
+                    mot = token.data.scalar.value;
+                }
+                if (mystrcmp(token.data.scalar.value, dilacte) != 0)
+                    printf("scalar %s \n", token.data.scalar.value);
+                //printf("mot %s  et nombre %s\n",mot,nombre);
                 break;
+
         }
-        if (token.type != YAML_STREAM_END_TOKEN) {
+        if (token.type != YAML_STREAM_END_TOKEN)
             yaml_token_delete(&token);
-        }
-        // printf("nombre %d et mot %s", nombre, mot);
     } while (token.type != YAML_STREAM_END_TOKEN);
-    //on libère notre token et notre parser
     yaml_token_delete(&token);
+/* END new code */
+
+/* Cleanup */
     yaml_parser_delete(&parser);
-    //on en a fini avec le fichier
     fclose(fh);
+
 }
 
 int main(int argc, char *argv[]) {
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre
-    /* if (mystrcmp(argv[1], "-c") == 0 || mystrcmp(argv[1], "-commande") == 0) {
-         usage();
-         exit(EXIT_SUCCESS);
-     }*/
+    if (mystrcmp(argv[1], "-c") == 0 || mystrcmp(argv[1], "-commande") == 0) {
+        usage();
+        exit(EXIT_SUCCESS);
+    }
     if (mystrcmp(argv[1], "-d") == 0 || mystrcmp(argv[1], "-dilacte") == 0) {
         affichageDialecte();
+        exit(EXIT_SUCCESS);
+    }
+
+    if (argc != 3) {
+        usage();
+        exit(EXIT_FAILURE);
     }
 
     //Si le paramètre n'est pas une commande on test si c'est un dialecte
@@ -148,10 +166,26 @@ int main(int argc, char *argv[]) {
 
     //pour commencer on initialise notre array
     Array *arrayReference = array_initialisation();
+    Array *arrayDilacte = array_initialisation();
 
     //le dilacte FR_fr nous servira de référence
     //il permet de faire une array qui contient des structures
-    yaml(arrayReference, "FR_fr");
+   // yaml(arrayReference, "FR_fr");
+    //Puis on charge le dilacte demandé
+    // yaml(arrayDilacte, argv[1]);
 
+    array_insertion(arrayReference, 15, "quinze");
+    array_insertion(arrayReference, 16, "seize");
+
+    // Exemple de parcours de l'array Gabriel
+    array_affiche(arrayReference);
+
+
+    //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
+    //On peut donc effectuer la demande
+
+        //free(argv);
+    array_destroy(arrayReference);
+    array_destroy(arrayDilacte);
     return EXIT_SUCCESS;
 }

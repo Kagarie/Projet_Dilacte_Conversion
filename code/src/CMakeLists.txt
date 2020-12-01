@@ -8,15 +8,19 @@ add_subdirectory(chiffreEnLettre)
 add_subdirectory(utils)
 add_subdirectory(array)
 
-include_directories(${CMAKE_SOURCE_DIR}/array)
+include_directories(${CMAKE_SOURCE_DIR}/utils)
 
 add_executable(main main.h main.c)
 target_link_libraries(main utils)
 add_dependencies(main utils)
 
-include_directories(${CMAKE_SOURCE_DIR}/utils)
+include_directories(${CMAKE_SOURCE_DIR}/array)
 target_link_libraries(main array)
 add_dependencies(main array)
+
+include_directories(${CMAKE_SOURCE_DIR}/chiffreEnLettre)
+target_link_libraries(main chiffreEnLettre)
+add_dependencies(main chiffreEnLettre)
 
 
 INCLUDE_DIRECTORIES(/lib/)

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array -I/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils -I/lib
+C_INCLUDES = -I/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils -I/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array -I/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre -I/lib
 
 C_FLAGS = 
 

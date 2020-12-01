@@ -11,6 +11,14 @@ stddef.h
 -
 stdlib.h
 -
+chiffreEnLettre.h
+-
+
+/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.h
+stddef.h
+-
+stdlib.h
+-
 
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/main.c
 stdlib.h
@@ -32,6 +40,8 @@ yaml.h
 array.h
 -
 utils.h
+-
+chiffreEnLettre.h
 -
 
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/utils.h
