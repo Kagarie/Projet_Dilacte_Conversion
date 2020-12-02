@@ -12,7 +12,3 @@ add_test(test-mystrcmp[valgrind] "/usr/bin/valgrind" "--leak-check=full" "--quie
 set_tests_properties(test-mystrcmp[valgrind] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;64;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;0;")
 add_test(test-mystrcmp[normal] "./test-mystrcmp")
 set_tests_properties(test-mystrcmp[normal] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;66;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;0;")
-add_test(test-tronqueChaine[valgrind] "/usr/bin/valgrind" "--leak-check=full" "--quiet" "--error-exitcode=1" "./test-tronqueChaine")
-set_tests_properties(test-tronqueChaine[valgrind] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;64;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;0;")
-add_test(test-tronqueChaine[normal] "./test-tronqueChaine")
-set_tests_properties(test-tronqueChaine[normal] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;66;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/utils/CMakeLists.txt;0;")

@@ -13,7 +13,7 @@ stdlib.h
 -
 
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.inc
-chiffreEnLettre.h
+./chiffreEnLettre.h
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/chiffreEnLettre.h
 
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/chiffreEnLettre/test-creat-ChiffreEnLettre.c

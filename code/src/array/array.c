@@ -1,10 +1,19 @@
+/**
+ * @file Array
+ * Fonction Array
+ *
+ */
+
 #include "./array.h"
 #include "./array.inc"
 #include "./chiffreEnLettre.h"
 
 #include <stdio.h>
 
-
+/**
+ * Initialisation de la pile
+ * @return
+ */
 Array *array_initialisation() {
     Array *array = malloc(sizeof(Array));
     ChiffreEnLettre *chiffreEnLettre = malloc(sizeof(chiffreEnLettre_get_taille()));
@@ -20,6 +29,11 @@ Array *array_initialisation() {
     return array;
 }
 
+
+/**
+ * Destruction de la pile et de son contenu
+ * @param array
+ */
 void array_destroy(Array *array) {
     if (array == NULL) {
         exit(EXIT_FAILURE);
@@ -33,19 +47,40 @@ void array_destroy(Array *array) {
     free(array);
 }
 
+/**
+ * Return le nombre de la strucuture ChiffreEnLettre
+ * @param array
+ * @return
+ */
 int array_get_nombre(Array *array) {
     return chiffreEnLettre_get_nombre(array->premier);
 }
 
+/**
+ * Return le mot de la structure ChiffreEnLettre
+ * @param array
+ * @return
+ */
 char *array_get_mot(Array *array) {
     return chiffreEnLettre_get_mot(array->premier);
 }
 
-ChiffreEnLettre *array_get_premier(Array *array){
+/**
+ * Return l'élément de la pile sur lequel on est
+ * @param array
+ * @return
+ */
+ChiffreEnLettre *array_get_premier(Array *array) {
     return chiffreEnLettre_get_suivant(array->premier);
 }
 
-
+/**
+ * Génére une structure ChiffreEnLettre et l'ajoute à la pile
+ * @param array
+ * @param nombre
+ * @param mot
+ * @return
+ */
 void *array_insertion(Array *array, int nombre, char *mot) {
     ChiffreEnLettre *nouveau = malloc(sizeof(chiffreEnLettre_get_taille()));
     if (array == NULL || nouveau == NULL) {
@@ -60,6 +95,11 @@ void *array_insertion(Array *array, int nombre, char *mot) {
     array->premier = nouveau;
 }
 
+/**
+ * Permet d'afficher la pile
+ * @param array
+ * @return
+ */
 void *array_affiche(Array *array) {
     if (array == NULL) {
         exit(EXIT_FAILURE);

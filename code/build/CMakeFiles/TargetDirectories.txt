@@ -22,7 +22,6 @@
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/rebuild_cache.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/edit_cache.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/test.dir
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/test-tronqueChaine.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/install/local.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/test-mystrcmp.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/utils/CMakeFiles/test-my_strcat.dir

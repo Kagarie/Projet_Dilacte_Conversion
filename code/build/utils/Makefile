@@ -187,21 +187,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-utils/CMakeFiles/test-tronqueChaine.dir/rule:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/test-tronqueChaine.dir/rule
-.PHONY : utils/CMakeFiles/test-tronqueChaine.dir/rule
-
-# Convenience name for target.
-test-tronqueChaine: utils/CMakeFiles/test-tronqueChaine.dir/rule
-
-.PHONY : test-tronqueChaine
-
-# fast build rule for target.
-test-tronqueChaine/fast:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/build
-.PHONY : test-tronqueChaine/fast
-
-# Convenience name for target.
 utils/CMakeFiles/test-mystrcmp.dir/rule:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/test-mystrcmp.dir/rule
 .PHONY : utils/CMakeFiles/test-mystrcmp.dir/rule
@@ -300,33 +285,6 @@ test-mystrcmp.c.s:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-mystrcmp.dir/build.make utils/CMakeFiles/test-mystrcmp.dir/test-mystrcmp.c.s
 .PHONY : test-mystrcmp.c.s
 
-test-tronqueChaine.o: test-tronqueChaine.c.o
-
-.PHONY : test-tronqueChaine.o
-
-# target to build an object file
-test-tronqueChaine.c.o:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/test-tronqueChaine.c.o
-.PHONY : test-tronqueChaine.c.o
-
-test-tronqueChaine.i: test-tronqueChaine.c.i
-
-.PHONY : test-tronqueChaine.i
-
-# target to preprocess a source file
-test-tronqueChaine.c.i:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/test-tronqueChaine.c.i
-.PHONY : test-tronqueChaine.c.i
-
-test-tronqueChaine.s: test-tronqueChaine.c.s
-
-.PHONY : test-tronqueChaine.s
-
-# target to generate assembly for a file
-test-tronqueChaine.c.s:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/test-tronqueChaine.c.s
-.PHONY : test-tronqueChaine.c.s
-
 utils.o: utils.c.o
 
 .PHONY : utils.o
@@ -369,7 +327,6 @@ help:
 	@echo "... test"
 	@echo "... test-my_strcat"
 	@echo "... test-mystrcmp"
-	@echo "... test-tronqueChaine"
 	@echo "... utils"
 	@echo "... test-my_strcat.o"
 	@echo "... test-my_strcat.i"
@@ -377,9 +334,6 @@ help:
 	@echo "... test-mystrcmp.o"
 	@echo "... test-mystrcmp.i"
 	@echo "... test-mystrcmp.s"
-	@echo "... test-tronqueChaine.o"
-	@echo "... test-tronqueChaine.i"
-	@echo "... test-tronqueChaine.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

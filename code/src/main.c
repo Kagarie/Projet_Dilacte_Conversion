@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 #include <dirent.h>
 
@@ -8,14 +7,18 @@
 #include "./main.h"
 
 
-//explication de l'utilisation de la librairy
+/**
+ * Explique comment utiliser le programme
+ */
 void static usage() {
     puts("Le programme s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
     puts("-d -dilacte pour voir les dialecte disponible");
 }
 
-//a faire
+/**
+ * Affiche tous les yaml présent
+ */
 void affichageDialecte() {
     struct dirent *dir;
     // opendir() renvoie un pointeur de type DIR.
@@ -31,26 +34,12 @@ void affichageDialecte() {
 
 }
 
-//on vérifie si le dialecte est bien présent
-bool static verifDialecte(char *commande) {
-    int i = 0;
-    bool present = false;
-    //refaire cette fonction après avoir fini avec le tableau
-    /*while(i<sizeof(dialecte) || present){
-        if(mystrcmp(commande,dialecte[i])==0){
-        present=true;
-        }
-        i+=1;
-    }*/
-    //si le dialecte n'est pas présent on affiche les dialectes présent et on sort du programme
-    if (!present) {
-        puts("dialecte attendu");
-        return false;
-    }
-    //si le dialecte et présent on peut continuer le traitement
-    return true;
-}
-
+/**
+ * Permet de lire un fichier de type yaml ET
+ * l'ajoute dans une pile qui contient des structures de ChiffreEnLettre
+ * @param array
+ * @param dilacte
+ */
 void yaml(Array *array, char *dilacte) {
 
     //création du nom de feuille à chercher
@@ -119,11 +108,19 @@ void yaml(Array *array, char *dilacte) {
 /* END new code */
 
 /* Cleanup */
+    //free(str);
     yaml_parser_delete(&parser);
     fclose(fh);
 
 }
 
+/**
+ *Main du programme. Il prends deux arguments au lancement un dilacte et un nombre
+ * Il donne en sortie le nombre en équivalent toute lettre dans le dilacte demander
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char *argv[]) {
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre
@@ -140,12 +137,6 @@ int main(int argc, char *argv[]) {
         usage();
         exit(EXIT_FAILURE);
     }
-
-    //Si le paramètre n'est pas une commande on test si c'est un dialecte
-    //Si ce n'est pas un dialecte et ni une commande on arrête le programme
-    /*if (!verifDialecte(argv[1])) {
-        exit(EXIT_FAILURE);
-    }*/
 
     //si le second paramètre n'est pas un entier on arrête le programme
 
@@ -170,12 +161,9 @@ int main(int argc, char *argv[]) {
 
     //le dilacte FR_fr nous servira de référence
     //il permet de faire une array qui contient des structures
-   // yaml(arrayReference, "FR_fr");
+    yaml(arrayReference, "FR_fr");
     //Puis on charge le dilacte demandé
     // yaml(arrayDilacte, argv[1]);
-
-    array_insertion(arrayReference, 15, "quinze");
-    array_insertion(arrayReference, 16, "seize");
 
     // Exemple de parcours de l'array Gabriel
     array_affiche(arrayReference);
@@ -184,7 +172,7 @@ int main(int argc, char *argv[]) {
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
     //On peut donc effectuer la demande
 
-        //free(argv);
+    //free(argv);
     array_destroy(arrayReference);
     array_destroy(arrayDilacte);
     return EXIT_SUCCESS;

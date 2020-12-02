@@ -1,7 +1,15 @@
-#include <stdio.h>
+/**
+ * @file utils
+ * Feuille qui regroupe plusieurs fonctions utils
+ */
 #include "./utils.h"
 
-// ma propre function strcat
+/**
+ * Permet de concaténer deux chaines de caractéres entre elle
+ * @param destination
+ * @param source
+ * @return
+ */
 char *my_strcat(char *destination, const char *source) {
     //calcul de la longueur minimum
     char *ptr = destination + strlen(destination);
@@ -17,7 +25,12 @@ char *my_strcat(char *destination, const char *source) {
     return destination;
 }
 
-
+/**
+ * Permet de verifier que deux chaines soient exactement identique
+ * @param s1
+ * @param s2
+ * @return
+ */
 int mystrcmp(const char *s1, const char *s2) {
     int i = 0;
     do {
@@ -28,13 +41,5 @@ int mystrcmp(const char *s1, const char *s2) {
     return 0;
 }
 
-char *tronqueChaine(char *destination, const char *source, int lenght) {
-    char *ptr = destination;
-    for (int (i) = 0; (i) < lenght; i++)
-        *ptr++ = *source++;
 
-    printf("%s\n",ptr);
-    *ptr = '\0';
-    return destination;
-}
 

@@ -239,19 +239,6 @@ chiffreEnLettre/fast:
 .PHONY : chiffreEnLettre/fast
 
 #=============================================================================
-# Target rules for targets named test-tronqueChaine
-
-# Build rule for target.
-test-tronqueChaine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-tronqueChaine
-.PHONY : test-tronqueChaine
-
-# fast build rule for target.
-test-tronqueChaine/fast:
-	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/test-tronqueChaine.dir/build.make utils/CMakeFiles/test-tronqueChaine.dir/build
-.PHONY : test-tronqueChaine/fast
-
-#=============================================================================
 # Target rules for targets named test-mystrcmp
 
 # Build rule for target.
@@ -392,7 +379,6 @@ help:
 	@echo "... test-get-array"
 	@echo "... test-my_strcat"
 	@echo "... test-mystrcmp"
-	@echo "... test-tronqueChaine"
 	@echo "... utils"
 	@echo "... main.o"
 	@echo "... main.i"
