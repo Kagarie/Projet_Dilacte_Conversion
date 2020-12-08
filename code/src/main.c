@@ -3,22 +3,14 @@
 #include <string.h>
 #include <dirent.h>
 
-
 #include "./main.h"
 
-
-/**
- * Explique comment utiliser le programme
- */
 void static usage() {
     puts("Le programme s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
     puts("-d -dilacte pour voir les dialecte disponible");
 }
 
-/**
- * Affiche tous les yaml présent
- */
 void affichageDialecte() {
     struct dirent *dir;
     // opendir() renvoie un pointeur de type DIR.
@@ -33,13 +25,6 @@ void affichageDialecte() {
     }
 
 }
-
-/**
- * Permet de lire un fichier de type yaml ET
- * l'ajoute dans une pile qui contient des structures de ChiffreEnLettre
- * @param array
- * @param dilacte
- */
 void yaml(Array *array, char *dilacte) {
 
     //création du nom de feuille à chercher
@@ -114,13 +99,6 @@ void yaml(Array *array, char *dilacte) {
 
 }
 
-/**
- *Main du programme. Il prends deux arguments au lancement un dilacte et un nombre
- * Il donne en sortie le nombre en équivalent toute lettre dans le dilacte demander
- * @param argc
- * @param argv
- * @return
- */
 int main(int argc, char *argv[]) {
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre
@@ -172,7 +150,6 @@ int main(int argc, char *argv[]) {
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
     //On peut donc effectuer la demande
 
-    //free(argv);
     array_destroy(arrayReference);
     array_destroy(arrayDilacte);
     return EXIT_SUCCESS;
