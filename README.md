@@ -1,9 +1,10 @@
 # Projet_Dialecte_Conversion
 
-Partie chiffrEnLettre terminée ainsi. Il reste plus qu'a résoudre le problème pour lié la lib chiffreEnLettre à la structure de l'array. Une fois cela fait il faut que termine la partie array et j'aurai terminé ma partie.
+Pour ma partie il me reste plus qu'à résoudre le problème d'insertion dans le parser. 
+Mais aussi aller cherche la bon yaml demandé.
 
 
 ## Test : 
 
-En ce qui concerne les tests. Les tests sur la lib chiffreEnLettre et la lib utils on était effectué.
-Il ne reste donc que ceux pour l'array et le main une fois le code terminé.
+En ce qui concerne les tests. Les tests sur la lib chiffreEnLettre, la lib utils 
+et sur l'array on était réallisé (les principaux). Il ne reste plus qu'à faire des tests sur le main.
