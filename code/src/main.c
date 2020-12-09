@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+#include <assert.h>
 
 #include "./main.h"
 
@@ -34,69 +35,55 @@ void yaml(Array *array, char *dilacte) {
     my_strcat(str, ".yaml");
 
     //ouverture du fichier
-    FILE *fh = fopen(str, "r");
+    FILE *file = fopen(str, "rb");
+    assert(file);
 
     //on vérifie si le fichier à bien était ouvert
-    if (fh == NULL) {
+    if (file == NULL) {
         fputs("Erreur ouvertur yaml!\n", stderr);
         exit(EXIT_FAILURE);
     }
 
     yaml_parser_t parser;
-    yaml_token_t token;   /* new variable */
+    yaml_document_t document;
+    yaml_node_t *node;
+    int i = 1;
 
-    /* Initialize parser */
-    if (!yaml_parser_initialize(&parser))
-        fputs("Failed to initialize parser!\n", stderr);
-    if (fh == NULL)
-        fputs("Failed to open file!\n", stderr);
+    char *mot = NULL;
+    char *nombre = NULL;
 
-    /* Set input file */
-    yaml_parser_set_input_file(&parser, fh);
+    assert(yaml_parser_initialize(&parser));
 
+    yaml_parser_set_input_file(&parser, file);
 
-    char *mot;
-    char *nombre;
-    /* BEGIN new code */
-    do {
-        yaml_parser_scan(&parser, &token);
-        switch (token.type) { ;
-/* Token types (read before actual token) */
-            case YAML_KEY_TOKEN:
-                printf("(Key token)  ");
-                nombre = token.data.scalar.value;
-                printf("nombre %s\n", token.data.scalar.value);
+    if (!yaml_parser_load(&parser, &document)) {
+        goto done;
+    }
 
-                break;
-            case YAML_VALUE_TOKEN:
-                printf("(Value token) ");
-                mot = token.data.scalar.value;
-                break;
-/* Data */
-            case YAML_SCALAR_TOKEN:
-                if (token.type == YAML_KEY_TOKEN) {
-                    nombre = token.data.scalar.value;
+    while (1) {
+        node = yaml_document_get_node(&document, i);
+        if (!node) break;
+        i++;
+        node->type;
+        if (node->type == YAML_SCALAR_NODE) {
+            if (strcmp(node->data.scalar.value, dilacte)) {
+                if (node->data.scalar.style == 1) {
+                    nombre = node->data.scalar.value;
                 }
-                if (token.type = YAML_VALUE_TOKEN) {
-                    mot = token.data.scalar.value;
+                if (node->data.scalar.style == 3) {
+                    mot = node->data.scalar.value;
                 }
-                if (mystrcmp(token.data.scalar.value, dilacte) != 0)
-                    printf("scalar %s \n", token.data.scalar.value);
-                //printf("mot %s  et nombre %s\n",mot,nombre);
-                break;
-
+                if (i % 2 == 0) {
+                    array_insertion(array, atoi(nombre), mot);
+                    printf("nombre = %s  et mot = %s\n", nombre, mot);
+                }
+            }
         }
-        if (token.type != YAML_STREAM_END_TOKEN)
-            yaml_token_delete(&token);
-    } while (token.type != YAML_STREAM_END_TOKEN);
-    yaml_token_delete(&token);
-/* END new code */
-
-/* Cleanup */
-    //free(str);
+    }
+    yaml_document_delete(&document);
+    done:
     yaml_parser_delete(&parser);
-    fclose(fh);
-
+    assert(!fclose(file));
 }
 
 int main(int argc, char *argv[]) {
@@ -117,7 +104,6 @@ int main(int argc, char *argv[]) {
     }
 
     //si le second paramètre n'est pas un entier on arrête le programme
-
     if (strtol(argv[2], NULL, 0) == 0) {
         printf("entier attendu\n");
         exit(EXIT_FAILURE);
@@ -146,21 +132,19 @@ int main(int argc, char *argv[]) {
 
     //le dilacte FR_fr nous servira de référence
     //il permet de faire une array qui contient des structures
-    yaml(arrayReference, "FR_fr");
+    //yaml(arrayReference, "FR_fr");
 
     //Puis on charge le dilacte demandé
     yaml(arrayDilacte, dilacte);
 
     // Exemple de parcours de l'array Gabriel
-    //array_affiche(arrayReference);
-
+    array_affiche(arrayDilacte);
 
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
     //On peut donc effectuer la demande
 
     array_destroy(arrayReference);
     array_destroy(arrayDilacte);
+
     return EXIT_SUCCESS;
-
-
 }
