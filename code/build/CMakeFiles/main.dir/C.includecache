@@ -29,6 +29,8 @@ string.h
 -
 dirent.h
 -
+assert.h
+-
 ./main.h
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/main.h
 
