@@ -25,8 +25,8 @@ void affichageDialecte() {
     }
 
 }
-void yaml(Array *array, char *dilacte) {
 
+void yaml(Array *array, char *dilacte) {
     //création du nom de feuille à chercher
     char *str = (char *) calloc(20, 1);
     my_strcat(str, "yaml/");
@@ -123,7 +123,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
     // si le test précédent march on récupérer la valeur par précotion on la "nettoie"
-    int nombre = strtol(argv[2], NULL, 0);
+
     /*
         Si tous les tests précédents sont bien passé nous pouvons passer en
         phase de traitement de la demande
@@ -133,6 +133,13 @@ int main(int argc, char *argv[]) {
         Après on traite la demande si ce n'est pas présent dans le dilacte demandé on va chercher dans le tableau par défaut
     */
 
+
+    const char s[3] = "--";
+    char *dilacte;
+    dilacte = strtok(argv[1], s);
+    int nombre = strtol(argv[2], NULL, 0);
+
+
     //pour commencer on initialise notre array
     Array *arrayReference = array_initialisation();
     Array *arrayDilacte = array_initialisation();
@@ -140,11 +147,12 @@ int main(int argc, char *argv[]) {
     //le dilacte FR_fr nous servira de référence
     //il permet de faire une array qui contient des structures
     yaml(arrayReference, "FR_fr");
+
     //Puis on charge le dilacte demandé
-    // yaml(arrayDilacte, argv[1]);
+    yaml(arrayDilacte, dilacte);
 
     // Exemple de parcours de l'array Gabriel
-    array_affiche(arrayReference);
+    //array_affiche(arrayReference);
 
 
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
@@ -153,4 +161,6 @@ int main(int argc, char *argv[]) {
     array_destroy(arrayReference);
     array_destroy(arrayDilacte);
     return EXIT_SUCCESS;
+
+
 }
