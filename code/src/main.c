@@ -90,19 +90,17 @@ void yaml(Array *array, char *dilacte) {
     assert(!fclose(file));
 }
 
-char* convertion(Array *arrayRefernce, Array *arrayDilacte, int nombre) {
+char *convertion(Array *arrayRefernce, Array *arrayDilacte, int nombre) {
     ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
     char *res = NULL;
     while (ch != NULL) {
         if (nombre == chiffreEnLettre_get_nombre(ch)) {
             res = chiffreEnLettre_get_mot(ch);
-            strcat(res," ");
+            strcat(res, " ");
         }
         ch = chiffreEnLettre_get_suivant(ch);
     }
-
-    strcat(res, "test");
-return res;
+    return res;
 }
 
 int main(int argc, char *argv[]) {
@@ -153,10 +151,6 @@ int main(int argc, char *argv[]) {
 
     //Puis on charge le dilacte demandé
     yaml(arrayDilacte, dilacte);
-
-
-    // Exemple de parcours de l'array Gabriel
-    //array_affiche(arrayReference);
 
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
     //On peut donc effectuer la demande
