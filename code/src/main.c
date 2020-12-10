@@ -9,17 +9,19 @@
 void static usage() {
     puts("Le programme s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
     puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
-    puts("-d -dilacte pour voir les dialecte disponible");
+    puts("-d -dilacte pour voir les dialectes disponible");
 }
 
 void affichageDialecte() {
+    char *dialecte;
     struct dirent *dir;
     // opendir() renvoie un pointeur de type DIR.
     DIR *d = opendir("yaml/");
     if (d) {
         while ((dir = readdir(d)) != NULL) {
             if (mystrcmp(dir->d_name, ".") && mystrcmp(dir->d_name, "..")) {
-                fprintf(stdout, " Dilacte :%s \n", dir->d_name);
+                dialecte = strtok(dir->d_name,".yaml");
+                fprintf(stdout, " Dialecte : %s\n", dialecte);
             }
         }
         closedir(d);
@@ -62,8 +64,8 @@ void yaml(Array *array, char *dilacte) {
 
     while (1) {
         node = yaml_document_get_node(&document, i);
-        if (!node) break;
         i++;
+        if (!node) break;
         node->type;
         if (node->type == YAML_SCALAR_NODE) {
             if (strcmp(node->data.scalar.value, dilacte)) {
@@ -71,16 +73,15 @@ void yaml(Array *array, char *dilacte) {
                     nombre = node->data.scalar.value;
                 }
                 if (node->data.scalar.style == 3) {
-                    mot = node->data.scalar.value;
+                     mot = node->data.scalar.value;
                 }
                 if (i % 2 == 0) {
                     array_insertion(array, atoi(nombre), mot);
-                    printf("nombre = %s  et mot = %s\n", nombre, mot);
                 }
             }
         }
     }
-    yaml_document_delete(&document);
+    //yaml_document_delete(&document);
     done:
     yaml_parser_delete(&parser);
     assert(!fclose(file));
@@ -119,10 +120,8 @@ int main(int argc, char *argv[]) {
         Après on traite la demande si ce n'est pas présent dans le dilacte demandé on va chercher dans le tableau par défaut
     */
 
-
-    const char s[3] = "--";
     char *dilacte;
-    dilacte = strtok(argv[1], s);
+    dilacte = strtok(argv[1], "--");
     int nombre = strtol(argv[2], NULL, 0);
 
 
@@ -132,13 +131,13 @@ int main(int argc, char *argv[]) {
 
     //le dilacte FR_fr nous servira de référence
     //il permet de faire une array qui contient des structures
-    //yaml(arrayReference, "FR_fr");
+    yaml(arrayReference, "FR_fr");
 
     //Puis on charge le dilacte demandé
     yaml(arrayDilacte, dilacte);
 
     // Exemple de parcours de l'array Gabriel
-    array_affiche(arrayDilacte);
+    array_affiche(arrayReference);
 
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
     //On peut donc effectuer la demande
