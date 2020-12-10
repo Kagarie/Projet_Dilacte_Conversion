@@ -7,9 +7,11 @@
 #include "./main.h"
 
 void static usage() {
-    puts("Le programme s'utilise de la manière suivante\n./convertisseur [--dialecte , int]\n");
-    puts("Vous pouvez aussi utiliser les options suivantes\n-c -commande pour voir les commandes disponible");
-    puts("-d -dilacte pour voir les dialectes disponible");
+    puts("Le programme s'utilise de la manière suivante.\n./convertisseur {--dialecte , nombre}\n");
+    puts("Vous pouvez aussi utiliser les options suivantes.\n-c -commande pour voir les commandes disponible.");
+    puts("-d -dilacte pour voir les dialectes disponible.\n");
+    puts("Notre convertisseur marche pour les nombre compris en 0 et 1000.");
+    puts("Si le résultat est null alors votre nombre n'a pas pu être convertie.");
 }
 
 void affichageDialecte() {
@@ -20,7 +22,7 @@ void affichageDialecte() {
     if (d) {
         while ((dir = readdir(d)) != NULL) {
             if (mystrcmp(dir->d_name, ".") && mystrcmp(dir->d_name, "..")) {
-                dialecte = strtok(dir->d_name,".yaml");
+                dialecte = strtok(dir->d_name, ".yaml");
                 fprintf(stdout, " Dialecte : %s\n", dialecte);
             }
         }
@@ -73,7 +75,7 @@ void yaml(Array *array, char *dilacte) {
                     nombre = node->data.scalar.value;
                 }
                 if (node->data.scalar.style == 3) {
-                     mot = node->data.scalar.value;
+                    mot = node->data.scalar.value;
                 }
                 if (i % 2 == 0) {
                     array_insertion(array, atoi(nombre), mot);
@@ -81,10 +83,26 @@ void yaml(Array *array, char *dilacte) {
             }
         }
     }
+    array_insertion(array, -1, NULL);
     //yaml_document_delete(&document);
     done:
     yaml_parser_delete(&parser);
     assert(!fclose(file));
+}
+
+char* convertion(Array *arrayRefernce, Array *arrayDilacte, int nombre) {
+    ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
+    char *res = NULL;
+    while (ch != NULL) {
+        if (nombre == chiffreEnLettre_get_nombre(ch)) {
+            res = chiffreEnLettre_get_mot(ch);
+            strcat(res," ");
+        }
+        ch = chiffreEnLettre_get_suivant(ch);
+    }
+
+    strcat(res, "test");
+return res;
 }
 
 int main(int argc, char *argv[]) {
@@ -136,12 +154,13 @@ int main(int argc, char *argv[]) {
     //Puis on charge le dilacte demandé
     yaml(arrayDilacte, dilacte);
 
+
     // Exemple de parcours de l'array Gabriel
-    array_affiche(arrayReference);
+    //array_affiche(arrayReference);
 
     //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
     //On peut donc effectuer la demande
-
+    printf("%d = %s\n",nombre, convertion(arrayReference, arrayDilacte, nombre));
     array_destroy(arrayReference);
     array_destroy(arrayDilacte);
 
