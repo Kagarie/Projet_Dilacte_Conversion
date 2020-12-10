@@ -22,8 +22,7 @@ void affichageDialecte() {
     if (d) {
         while ((dir = readdir(d)) != NULL) {
             if (mystrcmp(dir->d_name, ".") && mystrcmp(dir->d_name, "..")) {
-                dialecte = strtok(dir->d_name, ".yaml");
-                fprintf(stdout, " Dialecte : %s\n", dialecte);
+                fprintf(stdout, " Dialecte : %s\n", dir->d_name);
             }
         }
         closedir(d);
