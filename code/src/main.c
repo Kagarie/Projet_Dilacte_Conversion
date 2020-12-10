@@ -90,7 +90,19 @@ void yaml(Array *array, char *dilacte) {
     assert(!fclose(file));
 }
 
-char *convertion(Array *arrayRefernce, Array *arrayDilacte, int nombre) {
+char *convertion(char *dialecte,int nombre) {
+
+    //pour commencer on initialise notre array
+    Array *arrayReference = array_initialisation();
+    Array *arrayDilacte = array_initialisation();
+
+    //le dilacte FR_fr nous servira de référence
+    //il permet de faire une array qui contient des structures
+    yaml(arrayReference, "FR_fr");
+
+    //Puis on charge le dilacte demandé
+    yaml(arrayDilacte, dialecte);
+
     ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
     char *res = NULL;
     while (ch != NULL) {
@@ -100,7 +112,18 @@ char *convertion(Array *arrayRefernce, Array *arrayDilacte, int nombre) {
         }
         ch = chiffreEnLettre_get_suivant(ch);
     }
+
+    array_destroy(arrayReference);
+    array_destroy(arrayDilacte);
     return res;
+}
+
+char *convertionDate() {
+
+}
+
+char *convertionRomain() {
+
 }
 
 int main(int argc, char *argv[]) {
@@ -126,37 +149,18 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
     // si le test précédent march on récupérer la valeur par précotion on la "nettoie"
-
-    /*
-        Si tous les tests précédents sont bien passé nous pouvons passer en
-        phase de traitement de la demande
-
-        Dans premier temps on charge dans un tableau le dilacte par défaut
-        Puis dans un second tableau le dilacte demandé
-        Après on traite la demande si ce n'est pas présent dans le dilacte demandé on va chercher dans le tableau par défaut
-    */
-
     char *dilacte;
     dilacte = strtok(argv[1], "--");
+
     int nombre = strtol(argv[2], NULL, 0);
 
 
-    //pour commencer on initialise notre array
-    Array *arrayReference = array_initialisation();
-    Array *arrayDilacte = array_initialisation();
-
-    //le dilacte FR_fr nous servira de référence
-    //il permet de faire une array qui contient des structures
-    yaml(arrayReference, "FR_fr");
-
-    //Puis on charge le dilacte demandé
-    yaml(arrayDilacte, dilacte);
-
-    //A ce moment la nous avons deux dilacte de charger (la référence et la demande)
-    //On peut donc effectuer la demande
-    printf("%d = %s\n",nombre, convertion(arrayReference, arrayDilacte, nombre));
-    array_destroy(arrayReference);
-    array_destroy(arrayDilacte);
-
+    if (mystrcmp(dilacte, "date") == 0) {
+        convertionDate(nombre);
+    } else if (mystrcmp(dilacte, "romain") == 0) {
+        convertionRomain(nombre);
+    } else {
+        printf("%d = %s\n", nombre, convertion(dilacte,nombre));
+    }
     return EXIT_SUCCESS;
 }
