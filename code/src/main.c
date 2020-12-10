@@ -89,7 +89,7 @@ void yaml(Array *array, char *dilacte) {
     assert(!fclose(file));
 }
 
-char *convertion(char *dialecte,int nombre) {
+char *convertion(char *dialecte, char *nombre) {
 
     //pour commencer on initialise notre array
     Array *arrayReference = array_initialisation();
@@ -117,11 +117,11 @@ char *convertion(char *dialecte,int nombre) {
     return res;
 }
 
-char *convertionDate() {
+char *convertionDate(char *nombre) {
 
 }
 
-char *convertionRomain() {
+char *convertionRomain(char *nombre) {
 
 }
 
@@ -151,15 +151,15 @@ int main(int argc, char *argv[]) {
     char *dilacte;
     dilacte = strtok(argv[1], "--");
 
-    int nombre = strtol(argv[2], NULL, 0);
+    char* nombre = argv[2];
 
 
     if (mystrcmp(dilacte, "date") == 0) {
-        convertionDate(nombre);
+        printf("date %s = %s\n", nombre, convertionDate(nombre));
     } else if (mystrcmp(dilacte, "romain") == 0) {
-        convertionRomain(nombre);
+        printf("Nombre de départ: %s conversion: %s\n", nombre, convertionRomain(nombre));
     } else {
-        printf("%d = %s\n", nombre, convertion(dilacte,nombre));
+        printf("Nombre de départ: %s conversion: %s\n", nombre, convertion(dilacte, nombre));
     }
     return EXIT_SUCCESS;
 }
