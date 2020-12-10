@@ -1,0 +1,21 @@
+test-creat-ChiffreEnLettre[valgrind] 0 0
+test-creat-ChiffreEnLettre[normal] 2 0.000494542
+test-get-ChiffreEnLettre[valgrind] 0 0
+test-get-ChiffreEnLettre[normal] 2 0.000424067
+test-my_strcat[valgrind] 0 0
+test-my_strcat[normal] 0 0
+test-mystrcmp[valgrind] 2 0.186367
+test-mystrcmp[normal] 2 0.000395683
+test-affiche-array[valgrind] 0 0
+test-affiche-array[normal] 2 0.00137662
+test-creat-array[valgrind] 0 0
+test-creat-array[normal] 2 0.000385304
+test-get-array[valgrind] 2 0.163247
+test-get-array[normal] 2 0.000458617
+---
+test-creat-ChiffreEnLettre[valgrind]
+test-get-ChiffreEnLettre[valgrind]
+test-my_strcat[valgrind]
+test-my_strcat[normal]
+test-affiche-array[valgrind]
+test-creat-array[valgrind]
