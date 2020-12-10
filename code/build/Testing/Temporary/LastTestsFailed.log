@@ -1,6 +1,0 @@
-1:test-creat-ChiffreEnLettre[valgrind]
-3:test-get-ChiffreEnLettre[valgrind]
-5:test-my_strcat[valgrind]
-6:test-my_strcat[normal]
-9:test-affiche-array[valgrind]
-11:test-creat-array[valgrind]

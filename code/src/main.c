@@ -91,25 +91,45 @@ void yaml(Array *array, char *dilacte) {
 
 char *convertion(char *dialecte, char *nombre) {
 
-    //pour commencer on initialise notre array
+    //pour commencer on initialise nos array(s)
     Array *arrayReference = array_initialisation();
     Array *arrayDilacte = array_initialisation();
 
-    //le dilacte FR_fr nous servira de référence
-    //il permet de faire une array qui contient des structures
+    //Le dilacte FR_fr nous servira de référence
+    //Et on charge le dialecte demandé
     yaml(arrayReference, "FR_fr");
-
-    //Puis on charge le dilacte demandé
     yaml(arrayDilacte, dialecte);
 
-    ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
     char *res = NULL;
-    while (ch != NULL) {
-        if (nombre == chiffreEnLettre_get_nombre(ch)) {
-            res = chiffreEnLettre_get_mot(ch);
-            strcat(res, " ");
+    int suivant = 1;
+    for (int k = strlen(nombre); k > 0; k--) {
+        suivant=1;
+        printf("k : %d\n",k);
+        ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
+        while (ch != NULL) {
+            if (atoi(nombre) == chiffreEnLettre_get_nombre(ch)) {
+                strcat(res,chiffreEnLettre_get_mot(ch));
+                strcat(res, " ");
+                printf("res : %s",res);
+                suivant = 0;
+                break;
+            }
+            ch = chiffreEnLettre_get_suivant(ch);
         }
-        ch = chiffreEnLettre_get_suivant(ch);
+
+        if (suivant==1) {
+            ChiffreEnLettre *ref = array_get_premier(arrayReference);
+            while (ref != NULL) {
+                puts("ok");
+                if (atoi(nombre) == chiffreEnLettre_get_nombre(ref)) {
+                    strcat(res,chiffreEnLettre_get_mot(ref));
+                    strcat(res, " ");
+                    printf("res : %s",res);
+                    break;
+                }
+                ref = chiffreEnLettre_get_suivant(ref);
+            }
+        }
     }
 
     array_destroy(arrayReference);
@@ -150,9 +170,7 @@ int main(int argc, char *argv[]) {
     // si le test précédent march on récupérer la valeur par précotion on la "nettoie"
     char *dilacte;
     dilacte = strtok(argv[1], "--");
-
-    char* nombre = argv[2];
-
+    char *nombre = argv[2];
 
     if (mystrcmp(dilacte, "date") == 0) {
         printf("date %s = %s\n", nombre, convertionDate(nombre));
