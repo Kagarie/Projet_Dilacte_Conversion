@@ -107,40 +107,66 @@ char *conversionReference(char *recherche) {
     yaml(arrayReference, "FR_fr");
     char *res = malloc(sizeof(char));
     res[0] = '\0';
-    int grandeur = 10;
-    for (int i = strlen(recherche); i > 0; i -= 1) {
 
-        if (puissance(grandeur, i) >= 1000) {
-            if (recherche[0] == '1') {
-                strcat(res, " mille");
-            } else {
-                ChiffreEnLettre *ref = array_get_premier(arrayReference);
-                while (ref != NULL) {
-                    if (recherche[i] == chiffreEnLettre_get_nombre(ref)) {
-                        strcat(res, chiffreEnLettre_get_mot(ref));
-                        strcat(res, " mille");
-                        break;
-                    }
-                    ref = chiffreEnLettre_get_suivant(ref);
-                }
-            }
 
-        } else if (puissance(grandeur, i) >= 100 && puissance(grandeur, i) < 1000) {
-
-        } else if (puissance(grandeur, i) >= 10 && puissance(grandeur, i) < 100) {
-
-        } else if (puissance(grandeur, i) < 10) {
-
+    int i = strlen(recherche);
+    int k = 0;
+    int grandeur = i;
+    while (i > 0) {
+        grandeur = i;
+        if (k == strlen(recherche) - 1 && atoi(&recherche[k]) == 0) {
+            break;
         }
 
+        if (recherche[k] == '1' && k != 2) {
+            ChiffreEnLettre *ref = array_get_premier(arrayReference);
+            while (ref != NULL) {
+                if (puissance(10, i - 1) == chiffreEnLettre_get_nombre(ref)) {
+                    strcat(res, chiffreEnLettre_get_mot(ref));
+                    strcat(res, " ");
+                }
+                ref = chiffreEnLettre_get_suivant(ref);
+            }
+        } else {
+            ChiffreEnLettre *ref = array_get_premier(arrayReference);
+            while (ref != NULL) {
+                if (i == 2) {
+                    if (atoi(&recherche[k]) == chiffreEnLettre_get_nombre(ref) &&
+                        recherche[k + 1] == '0') {
+                        int dizaine = atoi(&recherche[k]) + atoi(&recherche[k + 1]);
+                        int trouve = 0;
+                        // printf("dizaine %d\n", dizaine);
+                        puts(" ");
+                        if (dizaine == chiffreEnLettre_get_nombre(ref)) {
+                            strcat(res, chiffreEnLettre_get_mot(ref));
+                            strcat(res, " ");
+                            trouve = 1;
+                            break;
+                        }
+                    }
+                } else if (atoi(&recherche[k]) / puissance(10, i - 1) == chiffreEnLettre_get_nombre(ref) &&
+                           recherche[k] != '0') {
+                    strcat(res, chiffreEnLettre_get_mot(ref));
+                    strcat(res, " ");
+                    if (grandeur == 4) {
+                        strcat(res, "milles ");
+                    }
+                    if (grandeur == 3) {
+                        strcat(res, "cents ");
+                    }
+                }
+
+                ref = chiffreEnLettre_get_suivant(ref);
+            }
+        }
+        i -= 1;
+        k += 1;
     }
     array_destroy(arrayReference);
-    printf("res : %s\n",res);
     return res;
 }
 
 char *conversion(char *dialecte, char *nombre) {
-
     //Pour commencer on initialise notre array
     Array *arrayDialecte = array_initialisation();
 
@@ -149,6 +175,10 @@ char *conversion(char *dialecte, char *nombre) {
 
     char *res = malloc(sizeof(char));
     res[0] = '\0';
+
+    if (atoi(nombre) == 0) {
+        return "zéro";
+    }
     // On s'occupe de convertir le jour
     int trouve = 0;
     ChiffreEnLettre *d = array_get_premier(arrayDialecte);
@@ -231,11 +261,11 @@ char *conversionDate(char *date) {
         }
         m = chiffreEnLettre_get_suivant(m);
     }
-
     //l'annee
     char *a = conversionReference(annees);
     res = realloc(res, strlen(res) + strlen(a));
-    strcat(res, conversionReference(a));
+    strcat(res, a);
+
 
     array_destroy(arrayJour);
     array_destroy(arrayMois);
@@ -244,6 +274,49 @@ char *conversionDate(char *date) {
 
 char *conversionRomain(char *nombre) {
 
+    Array *arrayRomain = array_initialisation();
+    yaml(arrayRomain, "romain");
+    char *res = malloc(sizeof(char));
+    res[0] = '\0';
+
+    if (strlen(nombre) == 1 || strlen(nombre) == 2 && atoi(nombre) <= 16) {
+
+        int trouve = 0;
+        ChiffreEnLettre *romain = array_get_premier(arrayRomain);
+        while (romain != NULL) {
+            if (atoi(nombre) == chiffreEnLettre_get_nombre(romain)) {
+                strcat(res, chiffreEnLettre_get_mot(romain));
+                strcat(res, " ");
+                trouve = 1;
+                break;
+            }
+            romain = chiffreEnLettre_get_suivant(romain);
+        }
+        if (trouve == 0) {
+
+            puts("Erreur rencontré lors la conversion");
+            exit(EXIT_FAILURE);
+
+
+        }
+
+        array_destroy(arrayRomain);
+        return res;
+
+    } else if (strlen(nombre) == 2 && nombre[1] != 0) {
+        char *premier = malloc(sizeof(char));
+        premier[0] = nombre[0] * 10;
+        printf("%s\n", nombre);
+        char *premiernb = conversionRomain(premier);
+        char *deuxiemenb = conversionRomain(&nombre[1]);
+        char *res = malloc(sizeof(char));
+        res[0] = *premiernb;
+        strcat(res, deuxiemenb);
+        array_destroy(arrayRomain);
+        return res;
+
+
+    }
 }
 
 int main(int argc, char *argv[]) {
@@ -269,7 +342,7 @@ int main(int argc, char *argv[]) {
 
 
     //si le second paramètre n'est pas un entier on arrête le programme
-    if (strtol(argv[2], NULL, 0) == 0) {
+    if (strtol(argv[2], NULL, 0) < 0) {
         printf("entier attendu\n");
         exit(EXIT_FAILURE);
     }
@@ -277,6 +350,10 @@ int main(int argc, char *argv[]) {
     char *dilacte;
     dilacte = strtok(argv[1], "--");
     char *nombre = argv[2];
+    if (atoi(nombre) > 9999) {
+        puts("Nous n'acceptons pas les nombres supérieur à 9 999");
+        exit(EXIT_FAILURE);
+    }
 
 
     if (mystrcmp(dilacte, "date") == 0) {

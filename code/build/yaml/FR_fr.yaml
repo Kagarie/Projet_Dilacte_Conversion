@@ -21,6 +21,8 @@ FR_fr:
   40: "quarante"
   50: "cinquante"
   60: "soixante"
+  70: "soixante-dix"
   80: "quatre-vingt"
+  90: "quatre-vingt-dix" 
   100: "cent"
   1000: "mille"
