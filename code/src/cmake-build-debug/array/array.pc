@@ -1,0 +1,14 @@
+prefix=/usr/local
+bindir=${prefix}/bin/Debug
+staticlibdir=${prefix}/lib/Debug
+sharedlibdir=${prefix}/lib/Debug
+includedir=${prefix}/include
+
+Version: 
+
+Name: array
+Description: Array library
+
+Requires:
+Libs: -L${bindir} -L${staticlibdir} -L${sharedlibdir} -lfraction
+Cflags: -I${includedir}

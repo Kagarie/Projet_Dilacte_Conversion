@@ -64,8 +64,8 @@ extern char *chiffreEnLettre_get_mot(const ChiffreEnLettre *chiffreEnLettre);
 
 /**
  * Retourne l'élément sur lequel il pointe
- * @param chiffreEnLettre
- * @param chiffreEnLettreSuivant
+ * @param ch
+ * @param suivant
  */
 extern void chiffreEnLettre_set_suivant(ChiffreEnLettre *ch, ChiffreEnLettre *suivant);
 

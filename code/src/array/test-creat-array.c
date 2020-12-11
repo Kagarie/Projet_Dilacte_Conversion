@@ -15,7 +15,7 @@ int main(void) {
     //assert(array_get_nombre(array) == 0);
     ChiffreEnLettre *ch = chiffreEnLettre_get_suivant(array->premier);
     if (ch != NULL)
-        printf(chiffreEnLettre_get_mot(ch));
+        printf("%s",chiffreEnLettre_get_mot(ch));
     //assert(array_get_mot(array)==NULL);
     free(array);
     return EXIT_SUCCESS;

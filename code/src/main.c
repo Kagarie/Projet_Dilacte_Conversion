@@ -89,7 +89,7 @@ void yaml(Array *array, char *dilacte) {
     assert(!fclose(file));
 }
 
-char *convertion(char *dialecte, char *nombre) {
+char *conversion(char *dialecte, char *nombre) {
 
     //pour commencer on initialise nos array(s)
     Array *arrayReference = array_initialisation();
@@ -100,36 +100,36 @@ char *convertion(char *dialecte, char *nombre) {
     yaml(arrayReference, "FR_fr");
     yaml(arrayDilacte, dialecte);
 
-    char *res = NULL;
+    char *res = " ";
     int suivant = 1;
     for (int k = strlen(nombre); k > 0; k--) {
-        suivant=1;
-        printf("k : %d\n",k);
+        suivant = 1;
+        printf("k : %d\n", k);
         ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
         while (ch != NULL) {
             if (atoi(nombre) == chiffreEnLettre_get_nombre(ch)) {
-                strcat(res,chiffreEnLettre_get_mot(ch));
-                strcat(res, " ");
-                printf("res : %s",res);
+                res = chiffreEnLettre_get_mot(ch);
+                //strcat(res, chiffreEnLettre_get_mot(ch));
+                //res=chiffreEnLettre_get_mot(ch);
+                // printf("res : %s\n", res);
                 suivant = 0;
                 break;
             }
             ch = chiffreEnLettre_get_suivant(ch);
         }
 
-        if (suivant==1) {
+        if (suivant == 1) {
             ChiffreEnLettre *ref = array_get_premier(arrayReference);
             while (ref != NULL) {
-                puts("ok");
                 if (atoi(nombre) == chiffreEnLettre_get_nombre(ref)) {
-                    strcat(res,chiffreEnLettre_get_mot(ref));
-                    strcat(res, " ");
-                    printf("res : %s",res);
+                    res = chiffreEnLettre_get_mot(ref);
                     break;
                 }
                 ref = chiffreEnLettre_get_suivant(ref);
+
             }
         }
+        strcat(res, " ");
     }
 
     array_destroy(arrayReference);
@@ -137,11 +137,11 @@ char *convertion(char *dialecte, char *nombre) {
     return res;
 }
 
-char *convertionDate(char *nombre) {
+char *conversionDate(char *nombre) {
 
 }
 
-char *convertionRomain(char *nombre) {
+char *conversionRomain(char *nombre) {
 
 }
 
@@ -173,11 +173,11 @@ int main(int argc, char *argv[]) {
     char *nombre = argv[2];
 
     if (mystrcmp(dilacte, "date") == 0) {
-        printf("date %s = %s\n", nombre, convertionDate(nombre));
+        printf("date %s = %s\n", nombre, conversionDate(nombre));
     } else if (mystrcmp(dilacte, "romain") == 0) {
-        printf("Nombre de départ: %s conversion: %s\n", nombre, convertionRomain(nombre));
+        printf("Nombre de départ: %s conversion: %s\n", nombre, conversionRomain(nombre));
     } else {
-        printf("Nombre de départ: %s conversion: %s\n", nombre, convertion(dilacte, nombre));
+        printf("Nombre de départ: %s conversion: %s\n", nombre, conversion(dilacte, nombre));
     }
     return EXIT_SUCCESS;
 }

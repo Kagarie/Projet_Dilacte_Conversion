@@ -217,21 +217,6 @@ test-affiche-array/fast:
 .PHONY : test-affiche-array/fast
 
 # Convenience name for target.
-array/CMakeFiles/test-get-array.dir/rule:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array/CMakeFiles/test-get-array.dir/rule
-.PHONY : array/CMakeFiles/test-get-array.dir/rule
-
-# Convenience name for target.
-test-get-array: array/CMakeFiles/test-get-array.dir/rule
-
-.PHONY : test-get-array
-
-# fast build rule for target.
-test-get-array/fast:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/build
-.PHONY : test-get-array/fast
-
-# Convenience name for target.
 array/CMakeFiles/array.dir/rule:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array/CMakeFiles/array.dir/rule
 .PHONY : array/CMakeFiles/array.dir/rule
@@ -327,33 +312,6 @@ test-creat-array.c.s:
 	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-creat-array.dir/build.make array/CMakeFiles/test-creat-array.dir/test-creat-array.c.s
 .PHONY : test-creat-array.c.s
 
-test-get-array.o: test-get-array.c.o
-
-.PHONY : test-get-array.o
-
-# target to build an object file
-test-get-array.c.o:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/test-get-array.c.o
-.PHONY : test-get-array.c.o
-
-test-get-array.i: test-get-array.c.i
-
-.PHONY : test-get-array.i
-
-# target to preprocess a source file
-test-get-array.c.i:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/test-get-array.c.i
-.PHONY : test-get-array.c.i
-
-test-get-array.s: test-get-array.c.s
-
-.PHONY : test-get-array.s
-
-# target to generate assembly for a file
-test-get-array.c.s:
-	cd /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build && $(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/test-get-array.c.s
-.PHONY : test-get-array.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -370,7 +328,6 @@ help:
 	@echo "... array"
 	@echo "... test-affiche-array"
 	@echo "... test-creat-array"
-	@echo "... test-get-array"
 	@echo "... array.o"
 	@echo "... array.i"
 	@echo "... array.s"
@@ -380,9 +337,6 @@ help:
 	@echo "... test-creat-array.o"
 	@echo "... test-creat-array.i"
 	@echo "... test-creat-array.s"
-	@echo "... test-get-array.o"
-	@echo "... test-get-array.i"
-	@echo "... test-get-array.s"
 .PHONY : help
 
 

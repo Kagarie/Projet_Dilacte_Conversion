@@ -12,7 +12,3 @@ add_test(test-creat-array[valgrind] "/usr/bin/valgrind" "--leak-check=full" "--q
 set_tests_properties(test-creat-array[valgrind] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;51;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;0;")
 add_test(test-creat-array[normal] "./test-creat-array")
 set_tests_properties(test-creat-array[normal] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;52;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;0;")
-add_test(test-get-array[valgrind] "/usr/bin/valgrind" "--leak-check=full" "--quiet" "--error-exitcode=1" "./test-get-array")
-set_tests_properties(test-get-array[valgrind] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;51;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;0;")
-add_test(test-get-array[normal] "./test-get-array")
-set_tests_properties(test-get-array[normal] PROPERTIES  _BACKTRACE_TRIPLES "/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;52;add_test;/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/array/CMakeLists.txt;0;")

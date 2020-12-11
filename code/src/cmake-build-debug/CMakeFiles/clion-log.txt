@@ -1,0 +1,148 @@
+/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src
+-- Configuring done
+CMake Warning (dev) in chiffreEnLettre/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-creat-ChiffreEnLettre[valgrind]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in chiffreEnLettre/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-creat-ChiffreEnLettre[normal]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in chiffreEnLettre/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-get-ChiffreEnLettre[valgrind]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in chiffreEnLettre/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-get-ChiffreEnLettre[normal]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in utils/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-my_strcat[valgrind]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in utils/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-my_strcat[normal]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in utils/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-mystrcmp[valgrind]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in utils/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-mystrcmp[normal]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in array/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-affiche-array[valgrind]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in array/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-affiche-array[normal]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in array/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-creat-array[valgrind]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in array/CMakeLists.txt:
+  Policy CMP0110 is not set: add_test() supports arbitrary characters in test
+  names.  Run "cmake --help-policy CMP0110" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  The following name given to add_test() is invalid if CMP0110 is not set or
+  set to OLD:
+
+    `test-creat-array[normal]´
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+-- Build files have been written to: /home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug

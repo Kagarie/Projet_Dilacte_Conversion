@@ -35,5 +35,4 @@
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array/CMakeFiles/test-affiche-array.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array/CMakeFiles/edit_cache.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array/CMakeFiles/test.dir
-/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array/CMakeFiles/test-get-array.dir
 /home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array/CMakeFiles/array.dir

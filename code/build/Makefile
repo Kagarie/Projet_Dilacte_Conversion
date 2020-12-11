@@ -304,19 +304,6 @@ test-affiche-array/fast:
 .PHONY : test-affiche-array/fast
 
 #=============================================================================
-# Target rules for targets named test-get-array
-
-# Build rule for target.
-test-get-array: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-get-array
-.PHONY : test-get-array
-
-# fast build rule for target.
-test-get-array/fast:
-	$(MAKE) $(MAKESILENT) -f array/CMakeFiles/test-get-array.dir/build.make array/CMakeFiles/test-get-array.dir/build
-.PHONY : test-get-array/fast
-
-#=============================================================================
 # Target rules for targets named array
 
 # Build rule for target.
@@ -376,7 +363,6 @@ help:
 	@echo "... test-creat-ChiffreEnLettre"
 	@echo "... test-creat-array"
 	@echo "... test-get-ChiffreEnLettre"
-	@echo "... test-get-array"
 	@echo "... test-my_strcat"
 	@echo "... test-mystrcmp"
 	@echo "... utils"

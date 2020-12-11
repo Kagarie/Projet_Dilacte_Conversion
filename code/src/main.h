@@ -20,7 +20,7 @@ extern void yaml(Array *array, char *dilacte);
 
 /**
  *Main du programme. Il prends deux arguments au lancement un dilacte et un nombre
- * Il donne en sortie le nombre en équivalent toute lettre dans le dilacte demander
+ * Il donne en sortie le nombre en équivalent toute lettre dans le dialecte demander
  * @param argc
  * @param argv
  * @return
