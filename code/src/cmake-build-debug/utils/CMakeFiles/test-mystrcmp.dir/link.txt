@@ -1,1 +1,0 @@
-/usr/bin/cc -g -rdynamic CMakeFiles/test-mystrcmp.dir/test-mystrcmp.c.o -o test-mystrcmp  -Wl,-rpath,/home/aymeric/code/C/Projet_Dilacte_Conversion/code/src/cmake-build-debug/utils libutils.so 
