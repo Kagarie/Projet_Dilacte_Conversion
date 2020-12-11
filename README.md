@@ -1,10 +1,42 @@
-# Projet_Dialecte_Conversion
+Bienvenue dans la documentation du Projet Dialecte Conversion du groupe 1
+----
+Télécharger le projet
+```
+git clone https://github.com/Kagarie/Projet_Dilacte_Conversion.git
+```
 
-Pour ma partie il me reste plus qu'à résoudre le problème d'insertion dans le parser. 
-Mais aussi aller cherche la bon yaml demandé.
+Pour installer tous les composants nécessaires au bon fonctionnement de ce projet
+
+```
+cd Projet_Dilacte_Conversion/
+[sudo] pip install [--user] -r Projet_Dilacte_Conversion/docs/requirements.txt
+```
+
+Puis,
 
 
-## Test : 
+```
+$mkdir build ; cd build/
+$cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=/tmp
+```
+ou
+```
+$cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=~PATH
 
-En ce qui concerne les tests. Les tests sur la lib chiffreEnLettre, la lib utils 
-et sur l'array on était réallisé (les principaux). Il ne reste plus qu'à faire des tests sur le main.
+```
+
+```
+($make test)
+
+$make docs
+```
+
+Vous génèrerez ainsi la documentation du projet
+ 
+Installer le projet
+```
+($make install)
+```
+
+La documentation se situe dans le dossier build/docs/html
+
