@@ -12,7 +12,13 @@ Welcome to Projet_Dilacte_Conversion's documentation!
    
    
 
-   Application's fonctions :  <StructConvertisseur>
+   Main's fonctions  <main>
+   ChiffreEnLettre's fonctions <chl>
+   ChiffreEnLettre's structure <chlStruct>
+   Array's fonctions <array>
+   Array's structure <arrayStruct>
+   Usefull fonctions <utils>
+   
   
 
 

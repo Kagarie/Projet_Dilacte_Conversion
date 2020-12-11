@@ -5,9 +5,9 @@ Welcome to Projet_Dilacte_Conversion's documentation!
    :maxdepth: 2
    :caption: Contents:
    
-   Structure convertisseur :  <structConv>
+   ChiffreEnLettre's structure <chlStruct>
 
-.. doxygenfile:: convertisseur.h
+.. doxygenfile:: chiffreEnLettre.h
 
 
 

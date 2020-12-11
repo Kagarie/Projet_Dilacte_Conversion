@@ -4,8 +4,9 @@ project(Projet_Dilacte_Conversion)
 
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-add_subdirectory(docs)
 add_subdirectory(src)
+add_subdirectory(docs)
+
 #add_subdirectory(test)
 
 set(CPACK_GENERATOR "ZIP")
