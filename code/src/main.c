@@ -6,9 +6,12 @@
 
 #include "./main.h"
 
+
 void static usage() {
-    puts("Le programme s'utilise de la manière suivante.\n./convertisseur {--dialecte , nombre}\n");
-    puts("Vous pouvez aussi utiliser les options suivantes.\n-c -commande pour voir les commandes disponible.");
+    puts("Le programme s'utilise de la manière suivante.\n./main {--dialecte , nombre}\n");
+    puts("Vous pouvez aussi convertir un date.\n./main --date 01/01/1970\n");
+    puts("Mais aussi les chiffres romain.\n./main {--Romain,nombre}\n");
+    puts("Vous pouvez utiliser les options suivantes.\n-c -commande pour voir les commandes disponible.");
     puts("-d -dilacte pour voir les dialectes disponible.\n");
     puts("Notre convertisseur marche pour les nombre compris en 0 et 1000.");
     puts("Si le résultat est null alors votre nombre n'a pas pu être convertie.");
@@ -89,56 +92,154 @@ void yaml(Array *array, char *dilacte) {
     assert(!fclose(file));
 }
 
+int puissance(int x, int n) {
+    int y = 1;
+    unsigned int m = 1;
+    while (m <= n) {
+        y *= x;
+        m++;
+    }
+    return y;
+}
+
+char *conversionReference(char *recherche) {
+    Array *arrayReference = array_initialisation();
+    yaml(arrayReference, "FR_fr");
+    char *res = malloc(sizeof(char));
+    res[0] = '\0';
+    int grandeur = 10;
+    for (int i = strlen(recherche); i > 0; i -= 1) {
+
+        if (puissance(grandeur, i) >= 1000) {
+            if (recherche[0] == '1') {
+                strcat(res, " mille");
+            } else {
+                ChiffreEnLettre *ref = array_get_premier(arrayReference);
+                while (ref != NULL) {
+                    if (recherche[i] == chiffreEnLettre_get_nombre(ref)) {
+                        strcat(res, chiffreEnLettre_get_mot(ref));
+                        strcat(res, " mille");
+                        break;
+                    }
+                    ref = chiffreEnLettre_get_suivant(ref);
+                }
+            }
+
+        } else if (puissance(grandeur, i) >= 100 && puissance(grandeur, i) < 1000) {
+
+        } else if (puissance(grandeur, i) >= 10 && puissance(grandeur, i) < 100) {
+
+        } else if (puissance(grandeur, i) < 10) {
+
+        }
+
+    }
+    array_destroy(arrayReference);
+    printf("res : %s\n",res);
+    return res;
+}
+
 char *conversion(char *dialecte, char *nombre) {
 
-    //pour commencer on initialise nos array(s)
-    Array *arrayReference = array_initialisation();
-    Array *arrayDilacte = array_initialisation();
+    //Pour commencer on initialise notre array
+    Array *arrayDialecte = array_initialisation();
 
-    //Le dilacte FR_fr nous servira de référence
     //Et on charge le dialecte demandé
-    yaml(arrayReference, "FR_fr");
-    yaml(arrayDilacte, dialecte);
+    yaml(arrayDialecte, dialecte);
 
-    char *res = " ";
-    int suivant = 1;
-    for (int k = strlen(nombre); k > 0; k--) {
-        suivant = 1;
-        printf("k : %d\n", k);
-        ChiffreEnLettre *ch = array_get_premier(arrayDilacte);
-        while (ch != NULL) {
-            if (atoi(nombre) == chiffreEnLettre_get_nombre(ch)) {
-                res = chiffreEnLettre_get_mot(ch);
-                //strcat(res, chiffreEnLettre_get_mot(ch));
-                //res=chiffreEnLettre_get_mot(ch);
-                // printf("res : %s\n", res);
-                suivant = 0;
-                break;
-            }
-            ch = chiffreEnLettre_get_suivant(ch);
+    char *res = malloc(sizeof(char));
+    res[0] = '\0';
+    // On s'occupe de convertir le jour
+    int trouve = 0;
+    ChiffreEnLettre *d = array_get_premier(arrayDialecte);
+    while (d != NULL) {
+        if (atoi(nombre) == chiffreEnLettre_get_nombre(d)) {
+            strcat(res, chiffreEnLettre_get_mot(d));
+            strcat(res, " ");
+            trouve = 1;
+            break;
         }
-
-        if (suivant == 1) {
-            ChiffreEnLettre *ref = array_get_premier(arrayReference);
-            while (ref != NULL) {
-                if (atoi(nombre) == chiffreEnLettre_get_nombre(ref)) {
-                    res = chiffreEnLettre_get_mot(ref);
-                    break;
-                }
-                ref = chiffreEnLettre_get_suivant(ref);
-
-            }
-        }
-        strcat(res, " ");
+        d = chiffreEnLettre_get_suivant(d);
+    }
+    // l'element n'est pas present on cherche dans le dialecte de reference
+    if (trouve == 0) {
+        strcat(res, conversionReference(nombre));
     }
 
-    array_destroy(arrayReference);
-    array_destroy(arrayDilacte);
+    array_destroy(arrayDialecte);
     return res;
 }
 
 char *conversionDate(char *date) {
+    Array *arrayJour = array_initialisation();
+    Array *arrayMois = array_initialisation();
+    yaml(arrayJour, "Date_jour");
+    yaml(arrayMois, "Date_mois");
 
+    char *res = malloc(sizeof(char));
+    res[0] = '\0';
+    char *jour;
+    char *mois;
+    char *annees;
+
+    //on decoupe la date
+    for (int i = 0; i < 3; i += 1) {
+        switch (i) {
+            case 0:
+                jour = strtok(date, "/");
+                break;
+            case 1:
+                mois = strtok(NULL, "/");
+                break;
+            case 2:
+                annees = strtok(NULL, " ");
+                break;
+            default:
+                puts("Erreur dans la conversion de la date");
+                exit(EXIT_FAILURE);
+        }
+    }
+    //on verifie si la date est valide
+    if (atoi(jour) < 0 || atoi(jour) > 31 || atoi(mois) < 0 || atoi(mois) > 12 || atoi(annees) < 0) {
+        printf("Erreur dans la date saisie\n");
+        exit(EXIT_FAILURE);
+    }
+    // On s'occupe de convertir le jour
+    int trouve = 0;
+    ChiffreEnLettre *j = array_get_premier(arrayJour);
+    while (j != NULL) {
+        if (atoi(jour) == chiffreEnLettre_get_nombre(j)) {
+            strcat(res, chiffreEnLettre_get_mot(j));
+            strcat(res, " ");
+            trouve = 1;
+            break;
+        }
+        j = chiffreEnLettre_get_suivant(j);
+    }
+    // l'element n'est pas present on cherche dans le dialecte de reference
+    if (trouve == 0) {
+        strcat(res, conversionReference(jour));
+    }
+
+    //le mois
+    ChiffreEnLettre *m = array_get_premier(arrayMois);
+    while (m != NULL) {
+        if (atoi(mois) == chiffreEnLettre_get_nombre(m)) {
+            strcat(res, chiffreEnLettre_get_mot(m));
+            strcat(res, " ");
+            break;
+        }
+        m = chiffreEnLettre_get_suivant(m);
+    }
+
+    //l'annee
+    char *a = conversionReference(annees);
+    res = realloc(res, strlen(res) + strlen(a));
+    strcat(res, conversionReference(a));
+
+    array_destroy(arrayJour);
+    array_destroy(arrayMois);
+    return res;
 }
 
 char *conversionRomain(char *nombre) {
@@ -146,6 +247,10 @@ char *conversionRomain(char *nombre) {
 }
 
 int main(int argc, char *argv[]) {
+    if (argc == 1) {
+        usage();
+        exit(EXIT_FAILURE);
+    }
     //dans le premier cas on test si argc vaut 1 './programme' si oui on affiche comment utiliser la librayrie
     //Sinon on test si une commande est passé en paramètre
     if (mystrcmp(argv[1], "-c") == 0 || mystrcmp(argv[1], "-commande") == 0) {
@@ -162,6 +267,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
+
     //si le second paramètre n'est pas un entier on arrête le programme
     if (strtol(argv[2], NULL, 0) == 0) {
         printf("entier attendu\n");
@@ -172,8 +278,9 @@ int main(int argc, char *argv[]) {
     dilacte = strtok(argv[1], "--");
     char *nombre = argv[2];
 
+
     if (mystrcmp(dilacte, "date") == 0) {
-        printf("date %s = %s\n", nombre, conversionDate(nombre));
+        printf("date : %s\n", conversionDate(nombre));
     } else if (mystrcmp(dilacte, "romain") == 0) {
         printf("Nombre de départ: %s conversion: %s\n", nombre, conversionRomain(nombre));
     } else {

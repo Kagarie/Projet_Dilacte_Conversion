@@ -20,7 +20,14 @@ extern void affichageDialecte();
 extern void yaml(Array *array, char *dilacte);
 
 /**
- *Permet de convertir un nombre en son équivalent en lettre
+ * Permet de chercher dans la feuille yaml de reference
+ * @param recherche
+ * @return
+ */
+extern char *conversionReference(char *recherche);
+
+/**
+ * Permet de convertir un nombre en son équivalent en lettre
  * @param dialecte
  * @param nombre
  * @return
@@ -28,7 +35,7 @@ extern void yaml(Array *array, char *dilacte);
 extern char *conversion(char *dialecte, char *nombre);
 
 /**
- *Permet de convertir une date en chiffre en son équivalent lettre
+ * Permet de convertir une date en chiffre en son équivalent lettre
  * @param date
  * @return
  */
