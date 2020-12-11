@@ -21,8 +21,7 @@ $cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=/tmp
 ```
 ou
 ```
-$cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=~PATH
-
+$cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=[PATH]
 ```
 
 ```
