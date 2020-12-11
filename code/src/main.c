@@ -137,7 +137,7 @@ char *conversion(char *dialecte, char *nombre) {
     return res;
 }
 
-char *conversionDate(char *nombre) {
+char *conversionDate(char *date) {
 
 }
 

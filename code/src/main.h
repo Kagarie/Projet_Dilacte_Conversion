@@ -1,5 +1,6 @@
 #ifndef MAIN_H_
 #define MAIN_H_
+
 #include <yaml.h>
 #include <array.h>
 #include <utils.h>
@@ -17,6 +18,28 @@ extern void affichageDialecte();
  * @param dilacte
  */
 extern void yaml(Array *array, char *dilacte);
+
+/**
+ *Permet de convertir un nombre en son équivalent en lettre
+ * @param dialecte
+ * @param nombre
+ * @return
+ */
+extern char *conversion(char *dialecte, char *nombre);
+
+/**
+ *Permet de convertir une date en chiffre en son équivalent lettre
+ * @param date
+ * @return
+ */
+extern char *conversionDate(char *date);
+
+/**
+ *Permet convertir un chiffre en chiffre Romain
+ * @param nombre
+ * @return
+ */
+extern char *conversionRomain(char *nombre);
 
 /**
  *Main du programme. Il prends deux arguments au lancement un dilacte et un nombre
