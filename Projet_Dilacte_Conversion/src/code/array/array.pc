@@ -1,0 +1,9 @@
+prefix=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
+exec_prefix=/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+Name: Convertisseur
+Description: Array library, C project
+Version: 0.0.1
+Requires: 3.0
+Libs: -L${libdir} -lmylib Cflags: -I${includedir}
