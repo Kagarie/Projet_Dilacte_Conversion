@@ -18,21 +18,17 @@ $cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=/tmp
 ou
 ```
 $cmake ../Projet_Dilacte_Conversion -DCMAKE_INSTALL_PREFIX=~/.local
-
 ```
 Un dossier yaml devrait s'être deplacé dans le dossier de build
 
 ```
 $make
-
 ```
 
 ```
-
 $make test
 
 $make docs
-
 ```
 
 
@@ -41,7 +37,6 @@ Vous génèrerez ainsi la documentation du projet
  
 ```
 $make install
-
 ```
 
 La documentation se situe dans le dossier build/docs/html
