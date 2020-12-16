@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Project" targetName="numberToLetter" />
+      <config projectName="Project" targetName="test-get-NumberToLetter" />
+      <config projectName="Project" targetName="utils" />
+      <config projectName="Project" targetName="main" />
+      <config projectName="Project" targetName="test-my_strcat" />
+      <config projectName="Project" targetName="test-creat-NumberToLetter" />
+      <config projectName="Project" targetName="test-mystrcmp" />
+      <config projectName="Project" targetName="test-creat-array" />
+      <config projectName="Project" targetName="test-affiche-array" />
+      <config projectName="Project" targetName="array" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="660bebaf-d2ce-410f-938b-6a722448d3df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/3.19.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/ArrayConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/array.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/array.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-affiche-array.dir/test-affiche-array.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CMakeFiles/test-creat-array.dir/test-creat-array.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/array.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/libarray.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/test-affiche-array" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/array/test-creat-array" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/chiffreEnLettre.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/chiffreEnLettre.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-creat-ChiffreEnLettre.dir/test-creat-ChiffreEnLettre.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CMakeFiles/test-get-ChiffreEnLettre.dir/test-get-ChiffreEnLettre.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/ChiffreEnLettreConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/chiffreEnLettre.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/libchiffreEnLettre.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/test-creat-ChiffreEnLettre" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/chiffreEnLettre/test-get-ChiffreEnLettre" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-my_strcat.dir/test-my_strcat.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/test-mystrcmp.dir/test-mystrcmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CMakeFiles/utils.dir/utils.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/UtilsConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/libutils.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/test-my_strcat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/test-mystrcmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/utils/utils.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/yaml/Date_jour.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/yaml/Date_mois.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/yaml/FR_be.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/yaml/FR_fr.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/yaml/FR_fr_african.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/build/yaml/romain.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/ArrayConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/array.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/array.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/array.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/array.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/array.pc.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/test-affiche-array.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/array/test-creat-array.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/ChiffreEnLettreConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/chiffreEnLettre.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/chiffreEnLettre.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/chiffreEnLettre.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/chiffreEnLettre.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/chiffreEnLettre.pc.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/test-creat-ChiffreEnLettre.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/chiffreEnLettre/test-get-ChiffreEnLettre.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/UtilsConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/test-my_strcat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/test-mystrcmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/utils.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/src/utils/utils.pc.in" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="fnuthygf" />
+  </component>
+  <component name="ProjectId" id="1lhnObuSPPXioFSrCoYCGEzx1Sf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Projet_Dilacte_Conversion/src/code" />
+      <recent name="$PROJECT_DIR$/Projet_Dilacte_Conversion/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.main">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="array" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="array" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="numberToLetter" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="numberToLetter" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-affiche-array" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="test-affiche-array" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="test-affiche-array">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-creat-NumberToLetter" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="test-creat-NumberToLetter" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="test-creat-NumberToLetter">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-creat-array" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="test-creat-array" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="test-creat-array">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-get-NumberToLetter" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="test-get-NumberToLetter" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="test-get-NumberToLetter">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-my_strcat" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="test-my_strcat" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="test-my_strcat">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-mystrcmp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="test-mystrcmp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="test-mystrcmp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="utils" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="utils" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.main" />
+      <item itemvalue="CMake Application.array" />
+      <item itemvalue="CMake Application.test-affiche-array" />
+      <item itemvalue="CMake Application.test-creat-array" />
+      <item itemvalue="CMake Application.numberToLetter" />
+      <item itemvalue="CMake Application.test-creat-NumberToLetter" />
+      <item itemvalue="CMake Application.test-get-NumberToLetter" />
+      <item itemvalue="CMake Application.test-my_strcat" />
+      <item itemvalue="CMake Application.test-mystrcmp" />
+      <item itemvalue="CMake Application.utils" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="660bebaf-d2ce-410f-938b-6a722448d3df" name="Default Changelist" comment="" />
+      <created>1608058160272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608058160272</updated>
+      <workItem from="1608058161754" duration="1903000" />
+      <workItem from="1608125215225" duration="5243000" />
+      <workItem from="1608133152289" duration="1469000" />
+      <workItem from="1608135158139" duration="1114000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="40" width="355" height="604" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608136111005">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="40" width="355" height="604" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1608136111005" />
+  </component>
+</project>
