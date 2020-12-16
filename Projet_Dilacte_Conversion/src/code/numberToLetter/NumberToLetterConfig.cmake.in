@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+set_and_check(NUMBERTOLETTER_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+set_and_check(NUMBERTOLETTER_LIB_DIRS "${PACKAGE_PREFIX_DIR}/lib/${CMAKE_BUILD_TYPE}")
+set(NUMBERTOLETTER_LIBRARIES NumberToLetter)
+
+check_required_components(NumberToLetter)

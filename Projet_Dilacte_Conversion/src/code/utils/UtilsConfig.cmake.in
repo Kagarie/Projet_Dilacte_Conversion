@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+set_and_check(UTILS_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+set_and_check(UTILS "${PACKAGE_PREFIX_DIR}/lib/${CMAKE_BUILD_TYPE}")
+set(UTILS_LIBRARIES Utils)
+
+check_required_components(Utils)
