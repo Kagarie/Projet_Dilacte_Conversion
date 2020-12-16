@@ -1,1 +1,0 @@
-/usr/bin/cc -rdynamic CMakeFiles/test-affiche-array.dir/test-affiche-array.c.o -o test-affiche-array  -Wl,-rpath,/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/array:/home/aymeric/code/C/Projet_Dilacte_Conversion/code/build/chiffreEnLettre libarray.so ../chiffreEnLettre/libchiffreEnLettre.so 

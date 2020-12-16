@@ -1,7 +1,0 @@
-@PACKAGE_INIT@
-
-set_and_check(ARRAY_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
-set_and_check(ARRAY_LIB_DIRS "${PACKAGE_PREFIX_DIR}/lib/${CMAKE_BUILD_TYPE}")
-set(ARRAY_LIBRARIES array)
-
-check_required_components(array)
